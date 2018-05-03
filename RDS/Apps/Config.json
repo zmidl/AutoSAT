@@ -1,0 +1,114 @@
+{
+  "ReagentGroups": [
+    {
+      "Name": "公共试剂",
+      "IsExpanded": false,
+      "ReagentItems": [
+        {
+          "Name": "生理盐水",
+          "ParentName": "公共试剂"
+        },
+        {
+          "Name": "尿样保存液",
+          "ParentName": "公共试剂"
+        },
+        {
+          "Name": "矿物油",
+          "ParentName": "公共试剂"
+        },
+        {
+          "Name": "洗涤液",
+          "ParentName": "公共试剂"
+        }
+      ]
+    },
+    {
+      "Name": "UU",
+      "IsExpanded": false,
+      "ReagentItems": [
+        {
+          "Name": "扩增液",
+          "ParentName": "UU"
+        },
+        {
+          "Name": "阴性检测",
+          "ParentName": "UU"
+        },
+        {
+          "Name": "内标",
+          "ParentName": "UU"
+        },
+        {
+          "Name": "阳性检测",
+          "ParentName": "UU"
+        }
+      ]
+    },
+    {
+      "Name": "CT",
+      "IsExpanded": true,
+      "ReagentItems": [
+        {
+          "Name": "扩增液",
+          "ParentName": "CT"
+        },
+        {
+          "Name": "阴性检测",
+          "ParentName": "CT"
+        },
+        {
+          "Name": "内标",
+          "ParentName": "CT"
+        },
+        {
+          "Name": "阳性检测",
+          "ParentName": "CT"
+        }
+      ]
+    },
+    {
+      "Name": "NG",
+      "IsExpanded": false,
+      "ReagentItems": [
+        {
+          "Name": "扩增液",
+          "ParentName": "NG"
+        },
+        {
+          "Name": "阴性检测",
+          "ParentName": "NG"
+        },
+        {
+          "Name": "内标",
+          "ParentName": "NG"
+        },
+        {
+          "Name": "阳性检测",
+          "ParentName": "NG"
+        }
+      ]
+    },
+    {
+      "Name": "MG",
+      "IsExpanded": false,
+      "ReagentItems": [
+        {
+          "Name": "扩增液",
+          "ParentName": "MG"
+        },
+        {
+          "Name": "阴性检测",
+          "ParentName": "MG"
+        },
+        {
+          "Name": "内标",
+          "ParentName": "MG"
+        },
+        {
+          "Name": "阳性检测",
+          "ParentName": "MG"
+        }
+      ]
+    }
+  ]
+}

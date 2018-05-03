@@ -1,0 +1,1547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoSAT strMemo="工作平台配置信息" strVer="20180331">
+  <WorkPanel nPos="1" strMemo="台面信息" strName="PanelInfo">
+    <Area nPos="1" strMemo="样本区域,4个模块，共4*20个插槽" strName="AreaSample">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="5" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="6" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="7" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="8" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="9" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="10" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="11" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="12" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="13" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="14" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="15" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="16" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="17" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="18" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="19" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="20" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="2" nType="">
+        <Slot nPos="1" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="5" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="6" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="7" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="8" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="9" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="10" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="11" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="12" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="13" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="14" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="15" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="16" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="17" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="18" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="19" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="20" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="3" nType="">
+        <Slot nPos="1" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="5" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="6" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="7" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="8" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="9" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="10" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="11" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="12" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="13" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="14" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="15" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="16" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="17" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="18" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="19" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="20" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="4" nType="">
+        <Slot nPos="1" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="5" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="6" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="7" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="8" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="9" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="10" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="11" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="12" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="13" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="14" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="15" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="16" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="17" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="18" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="19" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="20" strMemo="样本管座">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+    <Area nPos="2" strMemo="试剂区域" strName="AreaReagen">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1" strMemo="磁珠瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="磁珠瓶座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="2" nType="">
+        <Slot nPos="1" strMemo="扩增液瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="扩增液瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="扩增液瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="扩增液瓶座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="3" nType="">
+        <Slot nPos="1" strMemo="阴阳性质控品瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="阴阳性质控品瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="阴阳性质控品瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="阴阳性质控品瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="5" strMemo="阴阳性质控品瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="6" strMemo="阴阳性质控品瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="7" strMemo="阴阳性质控品瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="8" strMemo="阴阳性质控品瓶座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="4" nType="">
+        <Slot nPos="1" strMemo="内标瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="内标瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="内标瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="内标瓶座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="5" nType="">
+        <Slot nPos="1" strMemo="试剂盒座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="试剂盒座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="试剂盒座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="试剂盒座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="5" strMemo="试剂盒座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="6" strMemo="试剂盒座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="7" strMemo="试剂盒座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="8" strMemo="试剂盒座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="6" nType="">
+        <Slot nPos="1" strMemo="酶瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="酶瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="酶瓶座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="酶瓶座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="7" nType="">
+        <Slot nPos="1" strMemo="石蜡瓶座">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+    <Area nPos="3" strMemo="吸头区域,9个" strName="AreaTip">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1" strMemo="Tip板座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="2" nType="">
+        <Slot nPos="1" strMemo="Tip板座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="3" nType="">
+        <Slot nPos="1" strMemo="Tip板座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="4" nType="">
+        <Slot nPos="1" strMemo="Tip板座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="5" nType="">
+        <Slot nPos="1" strMemo="Tip板座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="6" nType="">
+        <Slot nPos="1" strMemo="Tip板座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="7" nType="">
+        <Slot nPos="1" strMemo="Tip板座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="8" nType="">
+        <Slot nPos="1" strMemo="Tip板座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="9" nType="">
+        <Slot nPos="1" strMemo="Tip板座">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+    <Area nPos="4" strMemo="六连排耗材区域,3个模块，共3*7个插槽" strName="AreaNap">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="5" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="6" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="7" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="2" nType="">
+        <Slot nPos="1" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="5" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="6" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="7" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="3" nType="">
+        <Slot nPos="1" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="5" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="6" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="7" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+    <Area nPos="5" strMemo="加热区域,1个模块，共1*4个插槽" strName="AreaHeating">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+    <Area nPos="6" strMemo="振动区域,1个模块，共1*3个插槽" strName="AreaShaker">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+    <Area nPos="7" strMemo="磁吸区域,1个模块，共1*4个插槽" strName="AreaMagnet">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+    <Area nPos="8" strMemo="读数区域,1个模块，共1*5个插槽" strName="AreaReader">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+        <Slot nPos="5" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+    <Area nPos="9" strMemo="冷却区域,封蜡后冷却支架,1个模块，共1*1个插槽" strName="AreaCool">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1" strMemo="六联排座">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+    <Area nPos="10" strMemo="废弃物区域，废物筐,废液桶座,2个模块" strName="AreaWaste">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1" strMemo="废物筐座">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="2" nType="">
+        <Slot nPos="1" strMemo="废液桶座">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+    <Area nPos="11" strMemo="设备信息" strName="AreaSystem">
+      <Model nExist="1" nID="" nPos="1" nType="" strMemo="模块温度">
+        <Slot nMax="" nMin="" nNow="" nPos="1" strMemo="加热模块温度">
+          <Tube/>
+        </Slot>
+        <Slot nMax="" nMin="" nNow="" nPos="2" strMemo="读数模块温度">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="2" nType="" strMemo="内环境温湿度">
+        <Slot nMax="" nMin="" nNow="" nPos="1" strMemo="温度">
+          <Tube/>
+        </Slot>
+        <Slot nMax="" nMin="" nNow="" nPos="2" strMemo="湿度">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="3" nType="" strMemo="外环境温湿度">
+        <Slot nMax="" nMin="" nNow="" nPos="1" strMemo="温度">
+          <Tube/>
+        </Slot>
+        <Slot nMax="" nMin="" nNow="" nPos="2" strMemo="湿度">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="4" nType="" strMemo="锁">
+        <Slot nPos="1" nStatus="0" strMemo="小门锁">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" nStatus="0" strMemo="大门锁">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" nStatus="0" strMemo="紧急停锁">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="5" nType="" strMemo="灯">
+        <Slot nPos="1" nStatus="0" strMemo="照明灯">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2" nStatus="0" strMemo="红">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3" nStatus="0" strMemo="黄">
+          <Tube/>
+        </Slot>
+        <Slot nPos="4" nStatus="0" strMemo="绿">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="5" nType="" strMemo="灯">
+      </Model>
+    </Area>
+    <Area nPos="12" strMemo="操作臂信息" strName="AreaArm">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1">
+          <Tube/>
+        </Slot>
+        <Slot nPos="2">
+          <Tube/>
+        </Slot>
+        <Slot nPos="3">
+          <Tube/>
+        </Slot>
+      </Model>
+      <Model nExist="1" nID="" nPos="2" nType="">
+        <Slot nPos="1">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+    <Area nPos="13" strMemo="系统液桶座信息" strName="AreaSystemLiquide">
+      <Model nExist="1" nID="" nPos="1" nType="">
+        <Slot nPos="1" strMemo="系统液桶座">
+          <Tube/>
+        </Slot>
+      </Model>
+    </Area>
+  </WorkPanel>
+  <Container strMemo="容器信息" strName="ContainerInfo">
+    <Tube nID="" nOver="0" nType="1" strMemo="样本管">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nOver="0" nType="2" strMemo="磁珠瓶">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nOver="0" nType="3" strMemo="扩增液瓶">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nOver="0" nType="4" strMemo="阴阳性质控品瓶">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nOver="0" nType="5" strMemo="内标瓶">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nOver="0" nType="6" strMemo="试剂盒">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nOver="0" nType="7" strMemo="酶瓶">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nOver="0" nType="8" strMemo="石蜡瓶">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nOver="0" nType="9" strMemo="六联排">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="2">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="3">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="4">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="5">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="6">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nOver="0" nType="10" strMemo="Tip板300">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="2">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="3">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="4">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="5">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="6">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="7">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="8">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="9">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="10">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="11">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="12">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="13">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="14">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="15">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="16">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="17">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="18">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="19">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="20">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="21">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="22">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="23">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="24">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="25">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="26">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="27">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="28">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="29">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="30">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="31">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="32">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="33">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="34">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="35">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="36">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="37">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="38">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="39">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="40">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="41">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="42">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="43">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="44">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="45">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="46">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="47">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="48">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="49">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="50">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="51">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="52">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="53">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="54">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="55">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="56">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="57">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="58">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="59">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="60">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="61">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="62">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="63">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="64">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="65">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="66">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="67">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="68">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="69">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="70">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="71">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="72">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="73">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="74">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="75">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="76">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="77">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="78">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="79">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="80">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="81">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="82">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="83">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="84">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="85">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="86">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="87">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="88">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="89">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="90">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="91">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="92">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="93">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="94">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="95">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="96">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nOver="0" nType="11" strMemo="Tip板1000">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="2">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="3">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="4">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="5">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="6">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="7">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="8">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="9">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="10">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="11">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="12">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="13">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="14">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="15">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="16">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="17">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="18">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="19">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="20">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="21">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="22">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="23">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="24">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="25">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="26">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="27">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="28">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="29">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="30">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="31">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="32">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="33">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="34">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="35">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="36">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="37">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="38">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="39">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="40">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="41">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="42">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="43">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="44">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="45">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="46">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="47">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="48">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="49">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="50">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="51">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="52">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="53">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="54">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="55">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="56">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="57">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="58">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="59">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="60">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="61">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="62">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="63">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="64">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="65">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="66">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="67">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="68">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="69">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="70">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="71">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="72">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="73">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="74">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="75">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="76">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="77">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="78">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="79">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="80">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="81">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="82">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="83">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="84">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="85">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="86">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="87">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="88">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="89">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="90">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="91">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="92">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="93">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="94">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="95">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="96">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nMaxVolume="5000000" nNowVolume="0" nOver="0" nType="12" strMaxVolume="最大可容纳多少ml废液(六连排中废液、冲针液)" strMemo="废液桶">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+      <Cavity nPos="2">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nOver="0" nType="13" strMemo="系统液桶">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+    <Tube nID="" nMaxNum="5000" nNowNum="0" nOver="0" nType="14" strMaxNum="最大可容纳多少个耗材（六联排、Tip）" strMemo="废物筐">
+      <Cavity nPos="1">
+        <WorkLiquide/>
+      </Cavity>
+    </Tube>
+  </Container>
+  <Liquide nType="1" strMemo="液体信息" strName="LiquideInfo">
+    <WorkLiquide nComUsage="1" nID="" nOver="0" nRemainVolume="4000" nServingsVolume="4000" nType="1" strComUsage="公品" strMemo="生理盐水">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="1" nID="" nOver="0" nRemainVolume="2000" nServingsVolume="2000" nType="2" strComUsage="公品" strMemo="尿保">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="100" nServingsVolume="100" nType="3" strComUsage="专品" strMemo="阴性参考">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="100" nServingsVolume="100" nType="4" strComUsage="专品" strMemo="阳性参考">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="2500" nServingsVolume="2500" nType="5" strComUsage="专品" strMemo="阴性质控品">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="2500" nServingsVolume="2500" nType="6" strComUsage="专品" strMemo="低阳质控品">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="2500" nServingsVolume="2500" nType="7" strComUsage="专品" strMemo="高阳质控品">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="7500" nServingsVolume="7500" nType="8" strComUsage="专品" strMemo="阳性标准品">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="500" nServingsVolume="500" nType="9" strComUsage="专品" strMemo="梯度标准品">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="5000" nServingsVolume="5000" nType="10" strComUsage="专品" strMemo="样本">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="1000" nServingsVolume="1000" nType="11" strComUsage="专品" strMemo="内标">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="20000" nServingsVolume="20000" nType="12" strComUsage="专品" strMemo="核提">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="5000" nServingsVolume="5000" nType="13" strComUsage="专品" strMemo="扩增液">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="4000" nServingsVolume="4000" nType="14" strComUsage="专品" strMemo="扩增液A">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="3500" nServingsVolume="3500" nType="15" strComUsage="专品" strMemo="扩增液B">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="1000" nServingsVolume="1000" nType="16" strComUsage="专品" strMemo="定性酶">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="2" nID="" nOver="0" nRemainVolume="2500" nServingsVolume="2500" nType="17" strComUsage="专品" strMemo="定量酶">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="1" nID="" nOver="0" nRemainVolume="20000" nServingsVolume="20000" nType="18" strComUsage="公品" strMemo="磁珠">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="1" nID="" nOver="0" nRemainVolume="600000" nServingsVolume="600000" nType="19" strComUsage="公品" strMemo="洗涤液">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="1" nID="" nOver="0" nRemainVolume="15000" nServingsVolume="15000" nType="20" strComUsage="公品" strMemo="矿物油">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="1" nID="" nOver="0" nRemainVolume="100000" nServingsVolume="100000" nType="21" strComUsage="公品" strMemo="石蜡">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+    <WorkLiquide nComUsage="1" nID="" nOver="0" nRemainVolume="1000000" nServingsVolume="1000000" nType="22" strComUsage="公品" strMemo="系统液">
+      <TestInfo/>
+      <Patient/>
+    </WorkLiquide>
+  </Liquide>
+  <SpecialUsage nType="1" strMemo="专品信息" strName="SpecialUsageInfo">
+    <TestInfo nType="1" strMemo="普通">
+      <TestItem nType="1" strMemo="血筛">
+        <Flow nStepID="1" nType="1" strMemo="定量" strStepName="">
+          <Item nType="1" strMemo="HBV" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="2" strMemo="HCV" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="3" strMemo="HIV" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="4" strMemo="HPV" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+        </Flow>
+      </TestItem>
+      <TestItem nType="2" strMemo="生殖健康">
+        <Flow nStepID="2" nType="1" strMemo="定性" strStepName="">
+          <Item nType="1" strMemo="UU" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="2" strMemo="CT" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="3" strMemo="MG" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="4" strMemo="NG" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+        </Flow>
+      </TestItem>
+      <TestItem nType="3" strMemo="呼吸道疾病">
+        <Flow nStepID="3" nType="1" strMemo="定性" strStepName="">
+          <Item nType="1" strMemo="MP" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="2" strMemo="IAV" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+        </Flow>
+      </TestItem>
+      <TestItem nType="4" strMemo="肠道微生物">
+        <Flow nStepID="3" nType="1" strMemo="定性" strStepName="">
+          <Item nType="1" strMemo="EV71" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="2" strMemo="EV" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="3" strMemo="CA16" nStatus="0">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+        </Flow>
+      </TestItem>
+    </TestInfo>
+    <TestInfo nType="2" strMemo="急诊">
+      <TestItem nType="1" strMemo="血筛">
+        <Flow nStepID="4" nType="1" strMemo="定量" strStepName="">
+          <Item nType="1" strMemo="HBV">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="2" strMemo="HCV">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="3" strMemo="HIV">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+        </Flow>
+      </TestItem>
+      <TestItem nType="2" strMemo="生殖">
+        <Flow nStepID="5" nType="1" strMemo="定性" strStepName="">
+          <Item nType="1" strMemo="UU">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="2" strMemo="CT">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="3" strMemo="MG">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="4" strMemo="NG">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+        </Flow>
+      </TestItem>
+      <TestItem nType="3" strMemo="呼吸">
+        <Flow nStepID="6" nType="1" strMemo="定性" strStepName="">
+          <Item nType="1" strMemo="U">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="2" strMemo="C">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="3" strMemo="M">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+          <Item nType="4" strMemo="N">
+            <Test isDispatched="0" nID="1" nStep="0">
+              <nType>0</nType>
+            </Test>
+          </Item>
+        </Flow>
+      </TestItem>
+    </TestInfo>
+  </SpecialUsage>
+</AutoSAT>

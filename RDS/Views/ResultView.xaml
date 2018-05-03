@@ -1,0 +1,17 @@
+﻿<UserControl 
+    x:Class="RDS.Views.ResultView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:RDS.Views"
+    mc:Ignorable="d" 
+    d:DesignHeight="1000" 
+    d:DesignWidth="1900">
+    <Viewbox Stretch="Fill" >
+        <Canvas Width="950" Height="500">
+            <Button Style="{StaticResource RD_EllipseButtonBrightStyle2}" Content="{StaticResource NextView}" Width="80" Canvas.Top="200" Canvas.Right="0"/>
+            <ListBox Canvas.Left="30" Canvas.Top="30" Width="850" Height="440" Background="{StaticResource BlueColor2}"/>
+        </Canvas>
+    </Viewbox>
+</UserControl>

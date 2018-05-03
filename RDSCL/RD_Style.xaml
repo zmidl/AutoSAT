@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:RDSCL">
+
+    <Style x:Key="TextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Foreground" Value="{StaticResource BlueColor}"/>
+        <Setter Property="FontSize" Value="60"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+    
+</ResourceDictionary>

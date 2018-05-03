@@ -1,0 +1,58 @@
+﻿<UserControl 
+    x:Class="RDSCL.RD_SampleRack"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    x:Name="Instance"
+    xmlns:local="clr-namespace:RDSCL"
+    mc:Ignorable="d" 
+    d:DesignHeight="1800" d:DesignWidth="120">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="RD_Brush.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <UserControl.Style>
+        <Style TargetType="UserControl">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="UserControl">
+                        <Viewbox Stretch="Fill">
+                            <Canvas Width="120" Height="1800" >
+                                <Rectangle  Width="120" Height="1800" RadiusX="20" RadiusY="20" Fill="{StaticResource WathetColor2}"/>
+                                <Canvas x:Name="Canvas_Rack" Visibility="{Binding DataSource.State, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_SampleRack}}}" Width="120" Height="1800">
+                                    <Rectangle Width="120" Height="1800"  RadiusX="20" RadiusY="20" Fill="{StaticResource BlueColor2}"/>
+                                    <StackPanel Orientation="Vertical" Height="1700" Canvas.Left="30" Canvas.Top="0">
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[0].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,120,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[1].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[2].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[3].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[4].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[5].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[6].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[7].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[8].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[9].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[10].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[11].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[12].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[13].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[14].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[15].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[16].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[17].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[18].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                        <local:RD_Hole ContentColor="{Binding DataSource.Slots[19].Tube.Cavities[0].ContentColor, ElementName=Instance}" Width="60" Height="60" Margin="0,20,0,0" />
+                                    </StackPanel>
+                                </Canvas>
+                            </Canvas>
+                        </Viewbox>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Style>
+</UserControl>

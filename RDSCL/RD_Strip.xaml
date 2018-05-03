@@ -1,0 +1,54 @@
+﻿<UserControl 
+    x:Class="RDSCL.RD_Strip"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:RDSCL"
+    mc:Ignorable="d" 
+    x:Name="Instance"
+    d:DesignHeight="650" d:DesignWidth="90" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="RD_Brush.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="BlueColor2" Color="#FF75C8FF"/>
+            <SolidColorBrush x:Key="WathetColor2" Color="#FFD6ECFF"/>
+            <local:BoolToVisibility x:Key="BoolToVisibility"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <UserControl.Style>
+        <Style TargetType="UserControl">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Viewbox Stretch="Fill">
+                            <Canvas Width="90" Height="650">
+                                <Path x:Name="Path_Frame" Fill="{Binding DataSource.ContentColor,ElementName=Instance}" Stroke="{StaticResource BlueColor}" StrokeThickness="0" Data="M 2,2 L 20,2 A 5,7 0 1 0 70,2 L88,2 88,650 70,650 A 5,7 0 1 0 20,650 L 20,650 L2,650z"  />
+                                <StackPanel Orientation="Vertical" Visibility="{Binding DataSource.State,ElementName=Instance}" Canvas.Left="11" Canvas.Top="40">
+                                    <local:RD_Hole Width="68" Height="68" Margin="0,20,0,0" ContentColor="{Binding DataSource.Tube.Cavites[0].ContentColor, ElementName=Instance}"/>
+                                    <local:RD_Hole Width="68" Height="68" Margin="0,25,0,0" ContentColor="{Binding DataSource.Tube.Cavites[1].ContentColor, ElementName=Instance}"/>
+                                    <local:RD_Hole Width="68" Height="68" Margin="0,25,0,0" ContentColor="{Binding DataSource.Tube.Cavites[2].ContentColor, ElementName=Instance}"/>
+                                    <local:RD_Hole Width="68" Height="68" Margin="0,25,0,0" ContentColor="{Binding DataSource.Tube.Cavites[3].ContentColor, ElementName=Instance}"/>
+                                    <local:RD_Hole Width="68" Height="68" Margin="0,25,0,0" ContentColor="{Binding DataSource.Tube.Cavites[4].ContentColor, ElementName=Instance}"/>
+                                    <local:RD_Hole Width="68" Height="68" Margin="0,25,0,0" ContentColor="{Binding DataSource.Tube.Cavites[5].ContentColor, ElementName=Instance}"/>
+                                </StackPanel>
+                                <Grid Width="90" Height="760"  Canvas.Top="-60" >
+                                    <TextBlock x:Name="TextBlock_Number" Visibility="{Binding NumberVisibility,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Strip}}}" Text="{Binding Number,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Strip}}}" Foreground="{StaticResource BlueColor}"  FontSize="60"  FontWeight="Bold"  HorizontalAlignment="Center" />
+                                    <Path 
+                                        Visibility="{Binding DataSource.IsMove,Converter={StaticResource BoolToVisibility},ElementName=Instance}" 
+                                          VerticalAlignment="Bottom" Stretch="Uniform" Width="58" 
+                                          Data="{Binding DataSource.Icon,ElementName=Instance}" 
+                                          Fill="{StaticResource BlueColor}"/>
+                                    <TextBlock Foreground="{StaticResource BlueColor}"  Text="" TextWrapping="Wrap" Width="60" FontSize="60" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                                </Grid>
+                            </Canvas>
+                        </Viewbox>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Style>
+</UserControl>
+

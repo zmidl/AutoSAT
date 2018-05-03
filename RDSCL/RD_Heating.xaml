@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="RDSCL.RD_Heating"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RDSCL"
+             mc:Ignorable="d" 
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             d:DesignHeight="680" d:DesignWidth="642">
+    <UserControl.Resources>
+        <Storyboard x:Key="TwinkleAnimation" >
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:1"  />
+        </Storyboard>
+
+        <system:Double x:Key="StrokeThickness" >10</system:Double>
+
+        <LinearGradientBrush x:Key="ContentColorMask" EndPoint="1,0.5" StartPoint="0,0.5">
+            <GradientStop Color="#CC0E0E0E" Offset="0.992"/>
+            <GradientStop Color="#00D3D1D1"/>
+        </LinearGradientBrush>
+    </UserControl.Resources>
+    <UserControl.Style>
+        <Style TargetType="UserControl">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="UserControl">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="FlushAnimation">
+                                <DoubleAnimation Storyboard.TargetName="TextBlock_TemperatureBackground" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.5" AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Viewbox Stretch="Fill">
+                            <Canvas Height="670" Width="642">
+                                <Rectangle Canvas.Top="-25" Width="610" Height="770" RadiusX="25"  RadiusY="25" Fill="{StaticResource WathetColor}"/>
+                                <StackPanel Orientation="Horizontal" Canvas.Left="50" Canvas.Top="30">
+                                    <local:RD_Strip DataSource="{Binding DataSource.Slots[0],ElementName=Instance}" Width="90"/>
+                                    <local:RD_Strip DataSource="{Binding DataSource.Slots[1],ElementName=Instance}" Width="90"/>
+                                    <local:RD_Strip DataSource="{Binding DataSource.Slots[2],ElementName=Instance}" Width="90"/>
+                                    <local:RD_Strip DataSource="{Binding DataSource.Slots[3],ElementName=Instance}" Width="90"/>
+                                </StackPanel>
+                                <Rectangle x:Name="ReagentContent"  Fill="{StaticResource BlueColor}" Canvas.Left="450" Canvas.Top="135" Width="94" Height="444" RadiusX="10" RadiusY="10" />
+                                <TextBlock x:Name="TextBlock_TemperatureBackground" Canvas.Top="-105" Text="{Binding DataSource.Temperature,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Heating}}, StringFormat=裂解加热模块温度：\{0\}℃,FallbackValue=无法收到通讯数据}"  Style="{StaticResource TextBlockStyle2}" Foreground="{StaticResource BlueColor}">
+                                    <TextBlock.Triggers>
+                                        <EventTrigger RoutedEvent="TextBlock.Loaded" >
+                                            <BeginStoryboard  Storyboard="{StaticResource FlushAnimation}"/>
+                                        </EventTrigger>
+                                    </TextBlock.Triggers>
+                                </TextBlock>
+                                <Canvas x:Name="PopupForm" Visibility="Hidden" >
+                                    <TextBlock x:Name="TextBlock_TemperatureForeground" Canvas.Top="-100" Text="{Binding DataSource.Temperature,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Heating}}, StringFormat=裂解加热模块温度：\{0\}℃,FallbackValue=无法收到通讯数据}"  Style="{StaticResource TextBlockStyle2}" Foreground="{StaticResource BlueColor}"/>
+                                    <TextBlock Canvas.Left="473" Canvas.Top="300" Text="石蜡"  Style="{StaticResource TextBlockStyle2}" Foreground="{StaticResource BlueColor2}" TextWrapping="Wrap" Width="50" FontSize="50"/>
+                                </Canvas>
+                            </Canvas>
+                        </Viewbox>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="PopupForm" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self},Path=DataSource.IsWarmAlarm}" Value="True">
+                                <Setter  Property="Visibility"  TargetName="TextBlock_TemperatureBackground" Value="Visible" />
+                                <Setter  Property="Visibility"  TargetName="TextBlock_TemperatureForeground" Value="Hidden" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self},Path=DataSource.IsWarmAlarm}" Value="False">
+                                <Setter  Property="Visibility"  TargetName="TextBlock_TemperatureBackground" Value="Hidden" />
+                                <Setter  Property="Visibility"  TargetName="TextBlock_TemperatureForeground" Value="Visible" />
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Style>
+</UserControl>
+

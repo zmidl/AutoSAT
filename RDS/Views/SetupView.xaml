@@ -1,0 +1,171 @@
+﻿<UserControl 
+    x:Class="RDS.Views.SetupView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Converter="clr-namespace:RDS.ViewModels.Common"
+    mc:Ignorable="d"
+    d:DesignHeight="1000" d:DesignWidth="1900" Loaded="UserControl_Loaded" KeyDown="UserControl_KeyDown">
+    <UserControl.Resources>
+        <Converter:IntToBool x:Key="IntToBool"/>
+        <Path x:Key="Resources_Path_Next" Fill="{Binding ElementName=Button_Next,Path=Foreground}" Data="{StaticResource Next}"  Stretch="Uniform" Width="20" Height="20" Margin="5,4,0,0"/>
+
+        <Path x:Key="Resource_StackPanel_ClearPassword" Stretch="Fill" Width="40" Height="40" Data="{StaticResource  Eraser}" Fill="{Binding ElementName=Button_ClearPassword,Path=Foreground}"/>
+        <Path x:Key="Resources_Path_Add" Data="{StaticResource Add}" Fill="White" Height="10" Stretch="Uniform" />
+        <Path x:Key="Resources_Path_Remove" Data="{StaticResource Remove}" Fill="White" Width="15" Stretch="Uniform"/>
+        <DataTemplate x:Key="RD_TreeViewItem2Template">
+            <DockPanel LastChildFill="True" VerticalAlignment="Center">
+                <CheckBox IsChecked="{Binding Status,Converter={StaticResource IntToBool}}" Height="20" DockPanel.Dock="Left" Style="{StaticResource RD_TextSwitch}" Content="{Binding Memo}" Margin="-3,3,3,3" />
+            </DockPanel>
+        </DataTemplate>
+
+        <HierarchicalDataTemplate x:Key="RD_TreeViewItem1Template"  ItemsSource="{Binding Items}" ItemTemplate="{StaticResource RD_TreeViewItem2Template}">
+            <DockPanel LastChildFill="True" VerticalAlignment="Center" >
+                <TextBlock Text="{Binding Memo}" Margin="5,0,0,0" DockPanel.Dock="Left" VerticalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource BlueColor}"  />
+            </DockPanel>
+        </HierarchicalDataTemplate>
+
+        <HierarchicalDataTemplate x:Key="RD_TreeViewItem0Template"  ItemsSource="{Binding Flows}" ItemTemplate="{StaticResource RD_TreeViewItem1Template}">
+            <DockPanel LastChildFill="True" VerticalAlignment="Center" >
+                <TextBlock  Text="{Binding Memo}" Margin="5,0,0,0" DockPanel.Dock="Left" VerticalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource BlueColor}"  />
+            </DockPanel>
+        </HierarchicalDataTemplate>
+
+        <Style BasedOn="{StaticResource RD_TextBoxBrightStyle}" TargetType="TextBox">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="30"/>
+        </Style>
+
+        <DataTemplate x:Key="StatusColumn">
+            <CheckBox Style="{StaticResource RD_ElipseCheckBoxStyle}"  Height="18" IsChecked="{Binding IsSelected}" Margin="0,1,0,0" />
+        </DataTemplate>
+    </UserControl.Resources>
+    <Viewbox Stretch="Fill" >
+        <TabControl SelectedIndex="{Binding ViewIndex}" Width="950" Height="500" BorderThickness="0" BorderBrush="{x:Null}">
+            <TabItem Height="0.1" Width="0">
+                <Grid HorizontalAlignment="Center">
+                    <Popup StaysOpen="True" IsOpen="{Binding CapsLockState}" AllowsTransparency="True" PopupAnimation="Scroll" PlacementTarget="{Binding ElementName= PasswordBox1}" Placement="Left">
+                        <Label Style="{StaticResource RD_Label}" Foreground="White" HorizontalAlignment="Center" FontSize="17" Content="大写锁定已打开" />
+                    </Popup>
+
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                        <TextBlock Foreground="{StaticResource BlueColor}" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="{Binding Message,FallbackValue=请输入管理员口令}"/>
+                        <StackPanel Orientation="Horizontal" Margin="20">
+                            <Path Fill="{StaticResource BlueColor}" Stretch="Uniform" Width="36" Data="{StaticResource Lock}" />
+                            <PasswordBox x:Name="PasswordBox1" Style="{StaticResource RD_PasswordBoxBrightStyle}" FontSize="30" Width="200" Height="50" Margin="20,10,20,0">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="GotFocus">
+                                        <i:InvokeCommandAction Command="{Binding GotFocus}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </PasswordBox>
+                            <Button x:Name="Button_ClearPassword" Style="{StaticResource RD_EllipseButtonBrightStyle2}" Command="{Binding ClearPassword}" Content="{StaticResource Resource_StackPanel_ClearPassword}"  />
+                        </StackPanel>
+
+                        <Button x:Name="Button_AdministratorsLogin_Ok" Content="确定" IsDefault="True" Margin="20,10,20,0" Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ValidateAdministrators}" CommandParameter="0"  Width="120" Height="30" />
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Height="0.1" Width="0">
+                <Canvas>
+                    <Grid Canvas.Top="30" Canvas.Right="10" Width="50" Height="440">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <Button Width="50" Style="{StaticResource RD_EllipseButtonBrightStyle3}" Command="{Binding Save}"  >
+                                <Path Margin="5,8,0,0" Stretch="Fill" Data="{StaticResource P_Ok}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+                            </Button>
+                            <Button Width="50" Style="{StaticResource RD_EllipseButtonBrightStyle3}" Command="{Binding ExitView}" Margin="0,20,0,0">
+                                <Path Margin="7,7,0,0" Stretch="Fill" Data="{StaticResource P_Close}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+                            </Button>
+                            <Button x:Name="Button_Next" Margin="0,20,0,0" Command="{Binding EnterNext}" Style="{StaticResource RD_EllipseButtonBrightStyle3}" Width="50" >
+                                <Path Margin="10,6,0,0" Stretch="Fill"  Data="{StaticResource NextStep}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}" Width="10" Height="16"/>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+
+                    <!--<TreeView x:Name="treeview1" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalContentAlignment="Stretch" ItemsSource="{Binding RuntimeData.SpecialUsage.TestInfos[0].TestItems}" ItemTemplate="{StaticResource RD_TreeViewItem0Template}" Width="337" Height="351" Canvas.Top="72" Canvas.Left="30" />-->
+                    <DataGrid 
+                        x:Name="ucDataGrid"  Style="{StaticResource RD_DataGridBrightStyle2}" TextBlock.LineStackingStrategy="MaxHeight"
+                    ItemsSource="{Binding RuntimeData.SpecialUsage.Items}"
+                    SelectionMode="Extended" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"
+                    AutoGenerateColumns="False" Width="380" Height="440" Canvas.Left="15" Canvas.Top="25">
+                        <DataGrid.InputBindings>
+                            <KeyBinding Key="Delete" Command="{Binding PressDelete}" CommandParameter="{Binding ElementName=ucDataGrid ,Path = SelectedItems}" />
+                        </DataGrid.InputBindings>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="96" IsReadOnly="True" Header="实验性质" Binding="{Binding FlowMemo}"/>
+                            <DataGridTextColumn Width="102" IsReadOnly="True" Header="试剂类型" Binding="{Binding MaterialMemo}" />
+                            <DataGridTextColumn Width="96" IsReadOnly="True" Header="项目试剂" Binding="{Binding Memo}" />
+                            <DataGridTemplateColumn Width="80" Header="是否启用"  CellTemplate="{StaticResource StatusColumn}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <TextBlock Style="{StaticResource TextBlockStyle}"  FontSize="16" FontWeight="Bold" Text="是否跑水" Canvas.Left="429" Canvas.Top="195"/>
+                    <TextBlock Style="{StaticResource TextBlockStyle}"  FontSize="16" FontWeight="Bold" Text="当前语言" Canvas.Left="428" Canvas.Top="144"/>
+                    <TextBlock Style="{StaticResource TextBlockStyle}"  FontSize="16" FontWeight="Bold" Text="是否调式" Canvas.Left="569" Canvas.Top="195"/>
+                    <CheckBox Style="{StaticResource RD_ElipseCheckBoxStyle}" IsChecked="{Binding IsRunByWater}" Width="30" Canvas.Left="499" Canvas.Top="187"/>
+                    <CheckBox Style="{StaticResource RD_ElipseCheckBoxStyle}" IsChecked="{Binding IsDebug}" Width="30" Canvas.Left="639" Canvas.Top="189"/>
+
+
+                    <ComboBox Style="{StaticResource RD_ComboBoxBrightStyle}" ItemsSource="{Binding Configuration.Language}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedLanguage}" Height="30" Width="120" Canvas.Left="497" Canvas.Top="134" />
+                    <TextBlock Style="{StaticResource TextBlockStyle}" FontSize="16" FontWeight="Bold" Text="温浴模块温度下限" Canvas.Left="428" Canvas.Top="250"/>
+                    <TextBox x:Name="TextBox_HeartingMinimizeTemperature" Text="{Binding HeartingMinimizeTemperature}" Width="120" Canvas.Left="568" Canvas.Top="240" />
+                    <Path Data="{StaticResource TemperatureCelsius}" Fill="{StaticResource BlueColor}" Stretch="Uniform" Canvas.Left="698" Canvas.Top="250"/>
+                    <TextBlock Style="{StaticResource TextBlockStyle}" FontSize="16" FontWeight="Bold" Text="温浴模块温度上限" Canvas.Left="429" Canvas.Top="301"/>
+                    <TextBox x:Name="TextBox_HeartingMaximizeTemperature" Text="{Binding HeartingMaximizeTemperature}" Width="120" Canvas.Left="569" Canvas.Top="291"/>
+                    <Path Data="{StaticResource TemperatureCelsius}" Fill="{StaticResource BlueColor}" Stretch="Uniform" Canvas.Left="699" Canvas.Top="301"/>
+                    <TextBlock Style="{StaticResource TextBlockStyle}" FontSize="16" FontWeight="Bold" Text="读数模块温度下限" Canvas.Left="428" Canvas.Top="350"/>
+                    <TextBox x:Name="TextBox_ReaderMinimizeTemperature" Text="{Binding ReaderMinimizeTemperature}" Width="120" Canvas.Left="568" Canvas.Top="340"/>
+                    <Path Data="{StaticResource TemperatureCelsius}" Fill="{StaticResource BlueColor}" Stretch="Uniform" Canvas.Left="698" Canvas.Top="350"/>
+                    <TextBlock Style="{StaticResource TextBlockStyle}" FontSize="16" FontWeight="Bold" Text="读数模块温度上限" Canvas.Left="429" Canvas.Top="403"/>
+                    <TextBox x:Name="TextBox_ReaderMaximizeTemperature" Text="{Binding ReaderMaximizeTemperature}" Width="120" Canvas.Left="569" Canvas.Top="393"/>
+                    <Path Data="{StaticResource TemperatureCelsius}" Fill="{StaticResource BlueColor}" Stretch="Uniform" Canvas.Left="699" Canvas.Top="403"/>
+
+                    <TextBlock Style="{StaticResource TextBlockStyle}"  FontSize="16" FontWeight="Bold" Text="客户模式" Canvas.Left="440" Canvas.Top="89"/>
+                    <CheckBox Style="{StaticResource RD_ElipseCheckBoxStyle}" IsChecked="{Binding IsUserMode}" Width="30" Canvas.Left="513" Canvas.Top="83"/>
+                    <TextBlock Style="{StaticResource TextBlockStyle}"  FontSize="16" FontWeight="Bold" Text="QC模式" Canvas.Left="561" Canvas.Top="89"/>
+                    <CheckBox Style="{StaticResource RD_ElipseCheckBoxStyle}" IsChecked="{Binding IsQcMode}" Width="30" Canvas.Left="623" Canvas.Top="83"/>
+                    <TextBlock Style="{StaticResource TextBlockStyle}"  FontSize="16" FontWeight="Bold" Text="检验模式" Canvas.Left="678" Canvas.Top="89"/>
+                    <CheckBox Style="{StaticResource RD_ElipseCheckBoxStyle}" IsChecked="{Binding IsExamineMode}" Width="30" Canvas.Left="748" Canvas.Top="83"/>
+                    <Rectangle Stroke="{StaticResource BlueColor}" StrokeDashArray="2" RadiusX="5" RadiusY="5" StrokeThickness="2" Width="360" Height="42" Canvas.Left="428" Canvas.Top="77"/>
+
+
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0.1" Width="0">
+                <Canvas>
+                    <Canvas.Resources>
+                        <Style TargetType="Button" BasedOn="{StaticResource RD_ButtonBrightStyle}"/>
+                    </Canvas.Resources>
+
+
+
+
+
+
+                    <Canvas>
+                        <TextBox x:Name="TextBoxCupName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="RD_Cup1" VerticalAlignment="Top" Width="120" Canvas.Left="95" Canvas.Top="412"/>
+                        <TextBox x:Name="TextBoxSlotName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="RD_Reader1:RD_Reader_CupSlot1" VerticalAlignment="Top" Width="206" Canvas.Left="95" Canvas.Top="448"/>
+                        <Button x:Name="BtnMoveCup" Content="Move" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="23"  Canvas.Left="320" Canvas.Top="448" />
+                        <TextBox x:Name="TextBoxDsp" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Canvas.Left="444" Canvas.Top="412"/>
+                        <TextBox x:Name="TextBox6" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="32" Canvas.Left="445" Canvas.Top="448"/>
+                        <TextBox x:Name="TextBox5" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="32" Canvas.Left="481" Canvas.Top="447"/>
+                        <TextBox x:Name="TextBox4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="32" Canvas.Left="519" Canvas.Top="447"/>
+                        <TextBox x:Name="TextBox3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="32" Canvas.Left="555" Canvas.Top="448"/>
+                        <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="32" Canvas.Left="593" Canvas.Top="448"/>
+                        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="一" VerticalAlignment="Top" Width="32" Canvas.Left="629" Canvas.Top="447"/>
+                        <Button x:Name="BtnConvert" Content="Convert" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="23" Canvas.Left="684" Canvas.Top="448" />
+
+
+                        <TextBox x:Name="R" Canvas.Left="700" Canvas.Top="78" Width="200" Height="30"/>
+                        <TextBox x:Name="T" Canvas.Left="700" Canvas.Top="112" Width="200" Height="30"/>
+                        <Button x:Name="Init" Content="初始化通讯" Canvas.Left="700" Canvas.Top="146" Width="90" Height="25"/>
+                        <Button x:Name="Send" Content="发送信息" Canvas.Left="810" Canvas.Top="146" Width="90" Height="25" />
+                    </Canvas>
+                </Canvas>
+            </TabItem>
+        </TabControl>
+    </Viewbox>
+</UserControl>

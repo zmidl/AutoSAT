@@ -1,0 +1,44 @@
+﻿<Application
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" 
+    xmlns:System="clr-namespace:System;assembly=mscorlib" 
+    xmlns:local="clr-namespace:RDS.ViewModels"
+    x:Class="RDS.Apps.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Apps/Dictionary/Language/zh-CN.xaml"/>
+                <!--
+                <ResourceDictionary Source="/Apps/Languages/en-US.xaml"/>-->
+                <!--<ResourceDictionary Source="/Apps/Dictionary/Language/en-US.xaml"/>-->
+                <ResourceDictionary Source="/Apps/Dictionary/Path.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_Line.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_Button.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_Brush.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_DataGrid.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_Expander.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_TreeView.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_ScrollBar.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_DatePicker.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_TextBox.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_ComboBox.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_TextBlock.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_ListBox.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_CheckBox.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_RadioButton.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_ToolTip.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Style/BrightStyle/RD_Label.xaml"/>
+                <ResourceDictionary Source="/Apps/Dictionary/Image.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="ToolTip" BasedOn="{StaticResource RD_ToolTipBrightStyle}"/>
+            <Path x:Key="Content_ExitView" Margin="6,3,0,0" Stretch="Fill" Data="{StaticResource Return}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+
+            <Path x:Key="PreviousView" Margin="0,4,0,0" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}" Data="{StaticResource Previouse}"  Stretch="Uniform" Width="20" Height="20" />
+            <Path x:Key="NextView" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}" Data="{StaticResource Next}"  Stretch="Uniform" Width="20" Height="20" Margin="6,4,0,0"/>
+            <!--<Path x:Key="Ok" Data="{StaticResource Ok}"  Margin="0,-1,0,0" Width="20" Height="20" Stretch="Fill" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type Button}}, Path=Foreground}" />-->
+            <Path x:Key="Cancel" Data="{StaticResource CancelCircle}"  Width="20" Height="20" Stretch="Fill" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type Button}}, Path=Foreground}" />
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

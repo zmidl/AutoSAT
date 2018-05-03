@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="RDSCL.RD_Waste"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RDSCL"
+             mc:Ignorable="d" 
+             d:DesignHeight="780" d:DesignWidth="180">
+    <Viewbox Stretch="Fill">
+        <StackPanel Orientation="Vertical" Width="180" Height="780">
+            <Border HorizontalAlignment="Stretch" Height="380" Background="{StaticResource BlueColor}">
+                <Rectangle Fill="{StaticResource WathetColor}" Width="50" Height="280" RadiusX="25" RadiusY="25"/>
+            </Border>
+
+            <Border HorizontalAlignment="Stretch" Height="380" Background="{StaticResource BlueColor}" Margin="0,20,0,0">
+                <Rectangle Fill="{StaticResource WathetColor}" Width="50" Height="280" RadiusX="25" RadiusY="25"/>
+            </Border>
+        </StackPanel>
+    </Viewbox>
+</UserControl>

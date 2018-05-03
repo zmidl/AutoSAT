@@ -1,0 +1,62 @@
+﻿<UserControl 
+    x:Class="RDS.Views.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d"
+    d:DesignHeight="1000" d:DesignWidth="1900">
+    
+    <!--<UserControl.InputBindings>
+        <KeyBinding Gesture="Ctrl+T" Command="{Binding ShowResultView}"/>
+    </UserControl.InputBindings>-->
+    <UserControl.Resources>
+
+        <SolidColorBrush x:Key="BodyBackground" Color="White"/>
+        <Style TargetType="Path">
+            <Setter Property="Fill" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Control}},Path=Foreground}"/>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Control}},Path=Foreground}"/>
+        </Style>
+        
+        <Path x:Key="Path_Exit" Data="{StaticResource P_Close}"  Stretch="UniformToFill" Width="17" Margin="6,6,0,0"/>
+        <Path x:Key="Path_Administrators" Data="{StaticResource AccountSettingsVariant}" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill" Height="20" Margin="2,4,0,0"/>
+        <Path x:Key="Path_Minimize" Data="{StaticResource Minimize}" Stretch="UniformToFill" Width="20" Height="3" Margin="4,13,0,0"/>
+        <Path x:Key="Path_Information" Data="{StaticResource Information}" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" Width="30" Height="20" Margin="-1,4,0,0"/>
+
+        <StackPanel x:Key="LabelButton_Content_Task" HorizontalAlignment="Center" Orientation="Horizontal" Margin="40,10,0,0">
+            <Path Stretch="Uniform" Width="80" Height="60"  Data="{StaticResource Monitor}"/>
+            <TextBlock FontSize="38" FontWeight="Bold" Text="{DynamicResource L_CurrentTask}" Margin="20,5,0,0"/>
+        </StackPanel>
+
+        <StackPanel x:Key="LabelButton_Content_Histroy" HorizontalAlignment="Center" Orientation="Horizontal" Margin="40,10,0,0">
+            <Path Stretch="Uniform" Width="80" Height="60"  Data="{StaticResource Histroy}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBlock FontSize="38" FontWeight="Bold" Text="{DynamicResource L_ExperimentResult}" Margin="20,5,0,0"/>
+        </StackPanel>
+
+        <StackPanel x:Key="LabelButton_Content_Help" HorizontalAlignment="Center" Orientation="Horizontal" Margin="40,10,0,0">
+            <Path  Stretch="Uniform" Width="80" Height="60" Data="{StaticResource Help}"/>
+            <TextBlock FontSize="38" FontWeight="Bold" Text="{DynamicResource MainView_Help}" Margin="20,5,0,0"/>
+        </StackPanel>
+
+    </UserControl.Resources>
+    <Viewbox Stretch="Fill" >
+        <Grid Width="1900" Height="1000">
+            <DockPanel Width="1900" Height="1000" LastChildFill="True">
+                <Canvas  x:Name="StackPanel_Head" Background="{StaticResource BlueColor}" Height="80"  DockPanel.Dock="Top">
+                    <Image Stretch="Fill" Height="70" Width="240" Canvas.Top="5" Canvas.Left="20" Source="{StaticResource Logo}" />
+                    <Button Style="{StaticResource RD_EllipseButtonBrightStyle}" Content="{StaticResource Path_Exit}" ToolTipService.ToolTip="{DynamicResource L_T_ExitApp}" Command="{Binding ExitApp}" Width="70" Height="70" Canvas.Right="20" Canvas.Top="5" FontSize="100" />
+                    <Button Style="{StaticResource RD_EllipseButtonBrightStyle}" Content="{StaticResource Path_Minimize}" ToolTipService.ToolTip="{DynamicResource L_T_Minimize}" Command="{Binding Minimized}" Width="70" Height="70" Canvas.Right="110" Canvas.Top="5"  FontSize="100" />
+                    <Button Style="{StaticResource RD_EllipseButtonBrightStyle}" Content="{StaticResource Path_Information}" ToolTipService.ToolTip="{DynamicResource L_T_Information}" Command="{Binding ShowInformation}" Width="70" Height="70" Canvas.Right="200" Canvas.Top="5" FontSize="100" />
+                    <Button Style="{StaticResource RD_EllipseButtonBrightStyle}" Content="{StaticResource Path_Administrators}" ToolTipService.ToolTip="{DynamicResource L_T_Setup}" Command="{Binding ShowAdministratorsLogin}" Width="70" Height="70" Canvas.Right="290" Canvas.Top="5"    FontSize="100" />
+                    <CheckBox Style="{StaticResource RD_LabelButtonBrightStyle}" IsChecked="{Binding IsTask}" Content="{StaticResource LabelButton_Content_Task}" Canvas.Left="400" Width="350" Height="81" />
+                    <CheckBox Style="{StaticResource RD_LabelButtonBrightStyle}" IsChecked="{Binding IsHistroy}" Content="{StaticResource LabelButton_Content_Histroy}" Canvas.Left="750" Width="350" Height="81"/>
+                    <CheckBox Style="{StaticResource RD_LabelButtonBrightStyle}" IsChecked="{Binding IsHelp}" Content="{StaticResource LabelButton_Content_Help}" Canvas.Left="1100" Width="350" Height="81"/>
+                </Canvas>
+                <ContentControl x:Name="ContentControl_CurrentContent"/>
+            </DockPanel>
+        </Grid>
+    </Viewbox>
+</UserControl>

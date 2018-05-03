@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="RDSCL.RD_Reader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RDSCL"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="680" d:DesignWidth="900">
+    <UserControl.Resources>
+        <system:Double x:Key="StrokeThickness" >10</system:Double>
+
+    </UserControl.Resources>
+    <UserControl.Style>
+        <Style TargetType="UserControl">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="UserControl">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="FlushAnimation">
+                                <DoubleAnimation Storyboard.TargetName="TextBlock_TemperatureBackground" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.5" AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                       
+                        <Viewbox Stretch="Fill">
+                            <Canvas Width="900" Height="670" >
+                                <Rectangle Canvas.Left="-330" Canvas.Top="-350" Width="1300" Height="1200" RadiusX="20" RadiusY="20" Fill="{StaticResource WathetColor3}" />
+                                <Rectangle Width="940" Height="860" RadiusX="30" RadiusY="30"  Canvas.Left="-130" Canvas.Top="-155" Fill="{StaticResource WathetColor}"/>
+                                <StackPanel Canvas.Left="0" Canvas.Top="-50" Orientation="Horizontal">
+                                    <StackPanel  Width="90" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                        <local:RD_Hole IsTwinkle="{Binding DataSource.EnzymeBottles[0].IsTwinkle,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}}" ContentColor="{Binding DataSource.EnzymeBottles[0].Color,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}}" Width="68" Margin="0,0,0,0"/>
+                                        <local:RD_Hole IsTwinkle="{Binding DataSource.EnzymeBottles[1].IsTwinkle,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}}" ContentColor="{Binding DataSource.EnzymeBottles[1].Color,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}}" Width="68" Margin="0,25,0,0"/>
+                                        <local:RD_Hole IsTwinkle="{Binding DataSource.EnzymeBottles[2].IsTwinkle,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}}" ContentColor="{Binding DataSource.EnzymeBottles[2].Color,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}}" Width="68" Margin="0,25,0,0"/>
+                                        <local:RD_Hole IsTwinkle="{Binding DataSource.EnzymeBottles[3].IsTwinkle,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}}" ContentColor="{Binding DataSource.EnzymeBottles[3].Color,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}}" Width="68" Margin="0,25,0,0"/>
+                                    </StackPanel>
+                                    <local:RD_Strip Width="90" Margin="30,0,0,0"/>
+                                    <local:RD_Strip Width="90" Margin="30,0,0,0"/>
+                                    <local:RD_Strip Width="90" Margin="30,0,0,0"/>
+                                    <local:RD_Strip Width="90" Margin="30,0,0,0"/>
+                                    <local:RD_Strip Width="90" Margin="30,0,0,0"/>
+                                    <local:RD_Strip Width="90" Margin="150,0,0,0" />
+                                </StackPanel>
+                                <TextBlock x:Name="TextBlock_TemperatureBackground" Canvas.Left="10" Canvas.Top="-250" Text="{Binding DataSource.Temperature,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}, StringFormat=荧光读数模块温度：\{0\}℃ }"  Style="{StaticResource TextBlockStyle2}" Foreground="{StaticResource BlueColor}">
+                                    <TextBlock.Triggers>
+                                        <EventTrigger RoutedEvent="TextBlock.Loaded" >
+                                            <BeginStoryboard  Storyboard="{StaticResource FlushAnimation}"/>
+                                        </EventTrigger>
+                                    </TextBlock.Triggers>
+                                </TextBlock>
+                                <Canvas x:Name="PopupForm" Visibility="Hidden" Canvas.Left="-50">
+                                    <TextBlock Canvas.Left="-200" Text="酶剩余量百分比" TextWrapping="Wrap" Style="{StaticResource TextBlockStyle2 }" Foreground="{StaticResource BlueColor}" Width="60"/>
+
+                                    <TextBlock x:Name="TextBlock_TemperatureForeground" Canvas.Left="60" Canvas.Top="-250" Text="{Binding DataSource.Temperature,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}, StringFormat=荧光读数模块温度：\{0\}℃}"  Style="{StaticResource TextBlockStyle2}" Foreground="{StaticResource BlueColor}"/>
+                                    <TextBlock HorizontalAlignment="Right" Canvas.Right="-62" Canvas.Top="94" Text="{Binding DataSource.EnzymeBottles[0].Volume,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}, StringFormat=\{0\}-,FallbackValue=空-}"  Style="{StaticResource TextBlockStyle2}"/>
+                                    <TextBlock HorizontalAlignment="Right" Canvas.Right="-62" Canvas.Top="188" Text="{Binding DataSource.EnzymeBottles[1].Volume,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}, StringFormat=\{0\}-,FallbackValue=空-}" Style="{StaticResource TextBlockStyle2}"/>
+                                    <TextBlock HorizontalAlignment="Right" Canvas.Right="-62" Canvas.Top="280" Text="{Binding DataSource.EnzymeBottles[2].Volume,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}, StringFormat=\{0\}-,FallbackValue=空-}" Style="{StaticResource TextBlockStyle2}"/>
+                                    <TextBlock HorizontalAlignment="Right" Canvas.Right="-62" Canvas.Top="375" Text="{Binding DataSource.EnzymeBottles[3].Volume,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:RD_Reader}}, StringFormat=\{0\}-,FallbackValue=空-}" Style="{StaticResource TextBlockStyle2}"/>
+                                </Canvas>
+                            </Canvas>
+                        </Viewbox>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="PopupForm" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self},Path=DataSource.IsWarmAlarm}" Value="True">
+                                <Setter  Property="Visibility"  TargetName="TextBlock_TemperatureBackground" Value="Visible" />
+                                <Setter  Property="Visibility"  TargetName="TextBlock_TemperatureForeground" Value="Hidden" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self},Path=DataSource.IsWarmAlarm}" Value="False">
+                                <Setter  Property="Visibility"  TargetName="TextBlock_TemperatureBackground" Value="Hidden" />
+                                <Setter  Property="Visibility"  TargetName="TextBlock_TemperatureForeground" Value="Visible" />
+                            </DataTrigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                    
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Style>
+   
+</UserControl>

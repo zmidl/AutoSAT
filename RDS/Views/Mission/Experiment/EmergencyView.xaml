@@ -1,0 +1,93 @@
+﻿<UserControl 
+    x:Class="RDS.Views.Monitor.EmergencyView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:RDS.Views.Monitor"
+    xmlns:rdscl="clr-namespace:RDSCL;assembly=RDSCL"
+    mc:Ignorable="d" 
+    xmlns:vm="clr-namespace:RDS.ViewModels.Mission.Experiment"
+    d:DesignHeight="1000" d:DesignWidth="1900">
+    <UserControl.DataContext>
+        <vm:EmergencyViewModel/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <Style BasedOn="{StaticResource TextBlockStyle}" TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin" Value="0,2.1,0,0"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <Path x:Key="Content_ExitView" Margin="6,3,0,0" Stretch="Fill" Data="{StaticResource Return}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+
+    </UserControl.Resources>
+
+    <Viewbox Stretch="Fill" >
+        <Grid Width="950" Height="500">
+            <Canvas>
+                <Grid Canvas.Top="30" Canvas.Right="10" Width="50" Height="440">
+                    <StackPanel VerticalAlignment="Center" >
+                        <Button Style="{StaticResource RD_EllipseButtonBrightStyle3}" Content="{StaticResource Content_ExitView}" Command="{Binding Exit}" ToolTipService.ToolTip="{DynamicResource L_T_ExitCurrentView}" Width="50" Height="50" />
+                    </StackPanel>
+                </Grid>
+                <DataGrid 
+                    x:Name="ucDataGrid" 
+                    Style="{StaticResource RD_DataGridBrightStyle}"
+                    AllowDrop="True" ItemsSource="{Binding Samples}"
+                    SelectionMode="Extended" 
+                    VerticalScrollBarVisibility="Auto"
+                    AutoGenerateColumns="False"
+                    Width="710" Height="450" 
+                    Canvas.Left="20" Canvas.Top="25">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn MinWidth="45" IsReadOnly="True" Header="{DynamicResource SampleView_HoleSite}" Binding="{Binding Number}"/>
+                        <DataGridTextColumn MinWidth="90" IsReadOnly="True" Header="{DynamicResource SampleView_BarCode}" Binding="{Binding Barcode}" />
+                        <DataGridTextColumn MinWidth="90" IsReadOnly="True" Header="{DynamicResource SampleView_Id}" Binding="{Binding Id}" />
+                        <DataGridTextColumn MinWidth="80" IsReadOnly="True" Header="{DynamicResource SampleView_Name}" Binding="{Binding Name}" />
+                        <DataGridTextColumn MinWidth="40" IsReadOnly="True" Header="{DynamicResource SampleView_Sex}" Binding="{Binding Sex}" />
+                        <DataGridTextColumn MinWidth="40" IsReadOnly="True" Header="{DynamicResource SampleView_Age}" Binding="{Binding Age}" />
+                        <DataGridTextColumn MinWidth="100" IsReadOnly="True" Header="类别" Binding="{Binding Type}" />
+                        <DataGridTextColumn MinWidth="120" IsReadOnly="True" Header="{DynamicResource SampleView_Item}" Binding="{Binding Item}" />
+                        <DataGridTextColumn MinWidth="100" IsReadOnly="True" Header="{DynamicResource SampleView_ExperimentDate}" Binding="{Binding ExperimentDate}" />
+                    </DataGrid.Columns>
+
+                </DataGrid>
+                <rdscl:RD_SampleRack DataSource="{Binding SampleRacks[0]}" Width="26" Canvas.Left="762" Canvas.Top="56"/>
+                <rdscl:RD_SampleRack DataSource="{Binding SampleRacks[1]}" Width="26" Canvas.Left="792" Canvas.Top="56"/>
+                <rdscl:RD_SampleRack DataSource="{Binding SampleRacks[2]}" Width="26" Canvas.Left="822" Canvas.Top="56"/>
+                <rdscl:RD_SampleRack DataSource="{Binding SampleRacks[3]}" Width="26" Canvas.Left="852" Canvas.Top="56"/>
+
+                <StackPanel Orientation="Horizontal" Canvas.Left="768" Canvas.Top="30">
+                    <TextBlock Text="A" FontSize="16"/>
+                    <TextBlock Text="B" FontSize="16" Margin="18,0,0,0"/>
+                    <TextBlock Text="C" FontSize="16" Margin="19,0,0,0"/>
+                    <TextBlock Text="D" FontSize="16" Margin="18,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Canvas.Left="743" Canvas.Top="79">
+                    <TextBlock Text="1" />
+                    <TextBlock Text="2" />
+                    <TextBlock Text="3" />
+                    <TextBlock Text="4" />
+                    <TextBlock Text="5" />
+                    <TextBlock Text="6" />
+                    <TextBlock Text="7" />
+                    <TextBlock Text="8" />
+                    <TextBlock Text="9" />
+                    <TextBlock Text="10" />
+                    <TextBlock Text="11" />
+                    <TextBlock Text="12" />
+                    <TextBlock Text="13" />
+                    <TextBlock Text="14" />
+                    <TextBlock Text="15" />
+                    <TextBlock Text="16" />
+                    <TextBlock Text="17" />
+                    <TextBlock Text="18" />
+                    <TextBlock Text="19" />
+                    <TextBlock Text="20" />
+                </StackPanel>
+                
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</UserControl>

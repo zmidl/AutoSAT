@@ -1,0 +1,135 @@
+﻿<UserControl 
+    x:Class="RDS.Views.Monitor.TipView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d" 
+    xmlns:vm="clr-namespace:RDS.ViewModels.Mission.Experiment"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+    xmlns:rdscl="clr-namespace:RDSCL;assembly=RDSCL"
+    xmlns:behavior="clr-namespace:RDS.ViewModels.Common.Behaviors"
+    d:DesignHeight="1000" d:DesignWidth="1900">
+    <UserControl.DataContext>
+        <vm:TipViewModel/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <Style x:Key="Target" TargetType="Path">
+            <Setter Property="Data" Value="M2,4V8H0V4A2,2 0 0,1 2,2H6V4H2M22,2A2,2 0 0,1 24,4V8H22V4H18V2H22M2,16V20H6V22H2A2,2 0 0,1 0,20V16H2M22,20V16H24V20A2,2 0 0,1 22,22H18V20H22Z"/>
+            <Setter Property="Stretch" Value="Fill"/>
+            <Setter Property="Width" Value="58"/>
+            <Setter Property="Height" Value="42"/>
+            <Setter Property="Fill" Value="{StaticResource BlueColor}"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Viewbox Stretch="Fill" >
+        <Canvas Width="950" Height="500" Background="#01000000">
+            <Grid Canvas.Top="30" Canvas.Right="10" Width="50" Height="440">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <Button Style="{StaticResource RD_EllipseButtonBrightStyle3}" Command="{Binding Exit}" Width="50" Height="50" >
+                        <Path Margin="6,3,0,0" Stretch="Fill" Data="{StaticResource Return}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <rdscl:RD_TipRack Panel.ZIndex="-1" DataSource="{Binding TipRack}" Width="600" Canvas.Left="30" Canvas.Top="45"/>
+            <Canvas Canvas.Left="670" Canvas.Top="100">
+                <Path Style="{StaticResource Target}" Visibility="{Binding State[0]}"/>
+                <Path Canvas.Top="43" Style="{StaticResource Target}" Visibility="{Binding State[1]}"/>
+                <Path Canvas.Top="86" Style="{StaticResource Target}" Visibility="{Binding State[2]}"/>
+
+                <Path Canvas.Left="59" Style="{StaticResource Target}" Visibility="{Binding State[3]}"/>
+                <Path Canvas.Left="59" Canvas.Top="43" Style="{StaticResource Target}" Visibility="{Binding State[4]}"/>
+                <Path Canvas.Left="59" Canvas.Top="86" Style="{StaticResource Target}" Visibility="{Binding State[5]}"/>
+
+                <Path Canvas.Left="118" Style="{StaticResource Target}" Visibility="{Binding State[6]}"/>
+                <Path Canvas.Left="118" Canvas.Top="43" Style="{StaticResource Target}" Visibility="{Binding State[7]}"/>
+                <Path Canvas.Left="118" Canvas.Top="86" Style="{StaticResource Target}" Visibility="{Binding State[8]}"/>
+
+                <rdscl:RD_TipRack DataSource="{Binding TipRacks[0]}" Canvas.Left="4" Canvas.Top="4" Width="50">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction Command="{Binding SelectTipRack}" CommandParameter="0"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </rdscl:RD_TipRack>
+
+                <rdscl:RD_TipRack DataSource="{Binding TipRacks[1]}" Canvas.Left="4" Canvas.Top="47" Width="50" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction Command="{Binding SelectTipRack}" CommandParameter="1"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </rdscl:RD_TipRack>
+
+                <rdscl:RD_TipRack DataSource="{Binding TipRacks[2]}" Canvas.Left="4" Canvas.Top="90" Width="50" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction Command="{Binding SelectTipRack}" CommandParameter="2"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </rdscl:RD_TipRack>
+
+                <rdscl:RD_TipRack DataSource="{Binding TipRacks[3]}" Canvas.Left="63" Canvas.Top="4" Width="50" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction Command="{Binding SelectTipRack}" CommandParameter="3"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </rdscl:RD_TipRack>
+
+                <rdscl:RD_TipRack DataSource="{Binding TipRacks[4]}" Canvas.Left="63" Canvas.Top="47" Width="50" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction Command="{Binding SelectTipRack}" CommandParameter="4"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </rdscl:RD_TipRack>
+
+                <rdscl:RD_TipRack DataSource="{Binding TipRacks[5]}" Canvas.Left="63" Canvas.Top="90" Width="50" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction Command="{Binding SelectTipRack}" CommandParameter="5"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </rdscl:RD_TipRack>
+
+                <rdscl:RD_TipRack DataSource="{Binding TipRacks[6]}" Canvas.Left="122" Canvas.Top="4" Width="50" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction Command="{Binding SelectTipRack}" CommandParameter="6"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </rdscl:RD_TipRack>
+
+                <rdscl:RD_TipRack DataSource="{Binding TipRacks[7]}" Canvas.Left="122" Canvas.Top="47" Width="50" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction Command="{Binding SelectTipRack}" CommandParameter="7"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </rdscl:RD_TipRack>
+
+                <rdscl:RD_TipRack DataSource="{Binding TipRacks[8]}" Canvas.Left="122" Canvas.Top="90" Width="50">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction Command="{Binding SelectTipRack}" CommandParameter="8"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </rdscl:RD_TipRack>
+
+            </Canvas>
+            <!--<Rectangle Stroke="{StaticResource BlueColor2}" RadiusX="5" RadiusY="5" StrokeThickness="2" StrokeDashArray="2" Width="176" Height="50" Canvas.Right="115" Canvas.Top="242" Canvas.Left="670" />-->
+            <CheckBox Content="300微升" Canvas.Right="115" Canvas.Top="252" Style="{StaticResource RD_TextSwitch}" Width="60" Canvas.Left="680"/>
+            <CheckBox Content="1000微升" Canvas.Right="115" Canvas.Top="252" Style="{StaticResource RD_TextSwitch}" Width="60" Canvas.Left="775"/>
+
+            <CheckBox Content="恢复" IsChecked="{Binding IsReset}" Canvas.Right="210" Canvas.Top="374" Style="{StaticResource RD_TextSwitch}" Width="60" Canvas.Left="680"/>
+            <CheckBox Content="装满" IsChecked="{Binding IsFull}" Canvas.Right="210" Canvas.Top="322" Style="{StaticResource RD_TextSwitch}" Width="60" Canvas.Left="775"/>
+            <CheckBox Content="清空" IsChecked="{Binding IsEmpty}" Canvas.Right="210" Canvas.Top="322" Style="{StaticResource RD_TextSwitch}" Width="60" Canvas.Left="680"/>
+
+            <i:Interaction.Behaviors>
+                <behavior:TipMultipSelect  ViewModel="{Binding}"/>
+            </i:Interaction.Behaviors>
+        </Canvas>
+    </Viewbox>
+</UserControl>

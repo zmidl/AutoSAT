@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="A" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="B" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="C" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="Chinese" xml:space="preserve">
+    <value>Chinese</value>
+  </data>
+  <data name="D" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="DatabaseConnectionString" xml:space="preserve">
+    <value>DatabaseConnectionString</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="FinalView_Message1" xml:space="preserve">
+    <value>FinalView_Message1</value>
+  </data>
+  <data name="FinalView_Message2" xml:space="preserve">
+    <value>FinalView_Message2</value>
+  </data>
+  <data name="FinalView_Message3" xml:space="preserve">
+    <value>FinalView_Message3</value>
+  </data>
+  <data name="InitializeSuppliesView_Message6" xml:space="preserve">
+    <value>InitializeSuppliesView_Message6</value>
+  </data>
+  <data name="InitializeSuppliesView_Message6_1" xml:space="preserve">
+    <value>InitializeSuppliesView_Message6_1</value>
+  </data>
+  <data name="InitializeSuppliesView_Message7" xml:space="preserve">
+    <value>InitializeSuppliesView_Message7</value>
+  </data>
+  <data name="InitializeSuppliesView_Message7_1" xml:space="preserve">
+    <value>InitializeSuppliesView_Message7_1</value>
+  </data>
+  <data name="InitializeSuppliesView_Message8" xml:space="preserve">
+    <value>InitializeSuppliesView_Message8</value>
+  </data>
+  <data name="InitializeSuppliesView_Message8_1" xml:space="preserve">
+    <value>InitializeSuppliesView_Message8_1</value>
+  </data>
+  <data name="InitializeSuppliesView_Message9" xml:space="preserve">
+    <value>InitializeSuppliesView_Message9</value>
+  </data>
+  <data name="InitializeSuppliesView_Message9_1" xml:space="preserve">
+    <value>InitializeSuppliesView_Message9_1</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="DateFormat" xml:space="preserve">
+    <value>yyyyMMdd</value>
+  </data>
+  <data name="LisFilesPath" xml:space="preserve">
+    <value>{0}\Apps\LisFiles\Barcode_{1}.xml</value>
+  </data>
+  <data name="LisInfo_Age" xml:space="preserve">
+    <value>strAge</value>
+  </data>
+  <data name="LisInfo_Barcode" xml:space="preserve">
+    <value>strBarcode</value>
+  </data>
+  <data name="LisInfo_Birthday" xml:space="preserve">
+    <value>strBirthday</value>
+  </data>
+  <data name="LisInfo_DateTime" xml:space="preserve">
+    <value>strDateTime</value>
+  </data>
+  <data name="LisInfo_Item" xml:space="preserve">
+    <value>strItem</value>
+  </data>
+  <data name="LisInfo_Name" xml:space="preserve">
+    <value>strName</value>
+  </data>
+  <data name="LisInfo_SampleID" xml:space="preserve">
+    <value>strSampleID</value>
+  </data>
+  <data name="LisInfo_SampleType" xml:space="preserve">
+    <value>strSampleType</value>
+  </data>
+  <data name="LisInfo_Sex" xml:space="preserve">
+    <value>strSex</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Rds123</value>
+  </data>
+  <data name="PopupWindow_CheckInstrumentErrorMessage" xml:space="preserve">
+    <value>PopupWindow_CheckInstrumentErrorMessage</value>
+  </data>
+  <data name="PopupWindow_Message1" xml:space="preserve">
+    <value>PopupWindow_Message1</value>
+  </data>
+  <data name="PopupWindow_Message2" xml:space="preserve">
+    <value>PopupWindow_Message2</value>
+  </data>
+  <data name="PopupWindow_TaskFinishedMessage" xml:space="preserve">
+    <value>PopupWindow_TaskFinishedMessage</value>
+  </data>
+  <data name="PopupWindow_Title_Administrators" xml:space="preserve">
+    <value>PopupWindow_Title_Administrators</value>
+  </data>
+  <data name="PopupWindow_Title_About" xml:space="preserve">
+    <value>PopupWindow_Title_About</value>
+  </data>
+  <data name="PopupWindow_Title_MessageBox" xml:space="preserve">
+    <value>PopupWindow_Title_MessageBox</value>
+  </data>
+  <data name="PopupWindow_Title_Wait" xml:space="preserve">
+    <value>PopupWindow_Title_Wait</value>
+  </data>
+  <data name="PrecheckView_CheckInstrument" xml:space="preserve">
+    <value>PrecheckView_CheckInstrument</value>
+  </data>
+  <data name="Reagents" xml:space="preserve">
+    <value>Reagents</value>
+  </data>
+  <data name="ReagentSeries" xml:space="preserve">
+    <value>ReagentSeries</value>
+  </data>
+  <data name="RemainingTimeFormat" xml:space="preserve">
+    <value>HH:mm:ss</value>
+  </data>
+  <data name="SelectedReanents" xml:space="preserve">
+    <value>SelectedReanents</value>
+  </data>
+  <data name="Separator1" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="StartupUri" xml:space="preserve">
+    <value>/RDS;component/Views/MainWindow.xaml</value>
+  </data>
+  <data name="TaskFinish" xml:space="preserve">
+    <value>TaskFinish</value>
+  </data>
+  <data name="TimeOut" xml:space="preserve">
+    <value>00:00:00</value>
+  </data>
+  <data name="TwinkleAnimation" xml:space="preserve">
+    <value>TwinkleAnimation</value>
+  </data>
+  <data name="BlueColor" xml:space="preserve">
+    <value>BlueColor</value>
+  </data>
+  <data name="GreenColor" xml:space="preserve">
+    <value>GreenColor</value>
+  </data>
+  <data name="WathetColor" xml:space="preserve">
+    <value>WathetColor</value>
+  </data>
+  <data name="ReagentInformation" xml:space="preserve">
+    <value>ReagentInformation</value>
+  </data>
+  <data name="One" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="StringFormat3" xml:space="preserve">
+    <value>{0}{1}{2}</value>
+  </data>
+  <data name="Separator2" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="Separator3" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="Zero" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Separator4" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="LanguageInformation" xml:space="preserve">
+    <value>LanguageInformation</value>
+  </data>
+  <data name="LanguagePath" xml:space="preserve">
+    <value>LanguagePath</value>
+  </data>
+  <data name="StringFormat2" xml:space="preserve">
+    <value>{0}{1}</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>男性</value>
+  </data>
+  <data name="HelpFilePath" xml:space="preserve">
+    <value>\Apps\Resource\Other\Help.xps</value>
+  </data>
+  <data name="Message1" xml:space="preserve">
+    <value>Message1</value>
+  </data>
+  <data name="Message2" xml:space="preserve">
+    <value>Message2</value>
+  </data>
+  <data name="Message3" xml:space="preserve">
+    <value>Message3</value>
+  </data>
+  <data name="MonitorView_TaskRunning" xml:space="preserve">
+    <value>MonitorView_TaskRunning</value>
+  </data>
+  <data name="MonitorView_TaskStart" xml:space="preserve">
+    <value>MonitorView_TaskStart</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Separator5" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="S" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="PopupWindow_Message3" xml:space="preserve">
+    <value>Message3</value>
+  </data>
+  <data name="DateFormat2" xml:space="preserve">
+    <value>yyyyMMddhhmmss</value>
+  </data>
+  <data name="UnKnow" xml:space="preserve">
+    <value>App_UnKnow</value>
+  </data>
+  <data name="ChartColor1" xml:space="preserve">
+    <value>ChartColor1</value>
+  </data>
+  <data name="ChartColor2" xml:space="preserve">
+    <value>ChartColor2</value>
+  </data>
+  <data name="ChartColor3" xml:space="preserve">
+    <value>ChartColor3</value>
+  </data>
+  <data name="GrayColor" xml:space="preserve">
+    <value>GrayColor</value>
+  </data>
+  <data name="Chart_Name1" xml:space="preserve">
+    <value>Chart_Name1</value>
+  </data>
+  <data name="Chart_Name2" xml:space="preserve">
+    <value>Chart_Name2</value>
+  </data>
+  <data name="Chart_Name3" xml:space="preserve">
+    <value>Chart_Name3</value>
+  </data>
+  <data name="Chart_Name4" xml:space="preserve">
+    <value>Chart_Name4</value>
+  </data>
+  <data name="Chart_Name5" xml:space="preserve">
+    <value>Chart_Name5</value>
+  </data>
+  <data name="Chart_Name6" xml:space="preserve">
+    <value>Chart_Name6</value>
+  </data>
+  <data name="Message4" xml:space="preserve">
+    <value>Message4</value>
+  </data>
+  <data name="PopupWindow_Message4" xml:space="preserve">
+    <value>PopupWindow_Message4</value>
+  </data>
+  <data name="PopupWindow_Message5" xml:space="preserve">
+    <value>PopupWindow_Message5</value>
+  </data>
+  <data name="HistroyView_SexItem_Both" xml:space="preserve">
+    <value>HistroyView_SexItem_Both</value>
+  </data>
+  <data name="HistroyView_SexItem_Man" xml:space="preserve">
+    <value>HistroyView_SexItem_Man</value>
+  </data>
+  <data name="HistroyView_SexItem_Woman" xml:space="preserve">
+    <value>HistroyView_SexItem_Woman</value>
+  </data>
+  <data name="ProjectInformation" xml:space="preserve">
+    <value>ProjectInformation</value>
+  </data>
+  <data name="RdsReaderWorkingDirectory" xml:space="preserve">
+    <value>\Apps\RdsReader\</value>
+  </data>
+  <data name="RdsReaderFileName" xml:space="preserve">
+    <value>FlourReader.exe</value>
+  </data>
+  <data name="PopupWindow_Title_Error" xml:space="preserve">
+    <value>PopupWindow_Title_Error</value>
+  </data>
+  <data name="PopupWindow_Message6" xml:space="preserve">
+    <value>PopupWindow_Message6</value>
+  </data>
+  <data name="Separator6" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="Message5" xml:space="preserve">
+    <value>Message5</value>
+  </data>
+  <data name="Message6" xml:space="preserve">
+    <value>Message6</value>
+  </data>
+  <data name="Message7" xml:space="preserve">
+    <value>Message7</value>
+  </data>
+  <data name="Message8" xml:space="preserve">
+    <value>Message8</value>
+  </data>
+  <data name="Message9" xml:space="preserve">
+    <value>Message9</value>
+  </data>
+  <data name="Message10" xml:space="preserve">
+    <value>Message10</value>
+  </data>
+  <data name="Message11" xml:space="preserve">
+    <value>Message11</value>
+  </data>
+  <data name="Message12" xml:space="preserve">
+    <value>Message12</value>
+  </data>
+  <data name="VaildationError1" xml:space="preserve">
+    <value>VaildationError1</value>
+  </data>
+  <data name="Separator7" xml:space="preserve">
+    <value>'</value>
+  </data>
+  <data name="Separator8" xml:space="preserve">
+    <value>"</value>
+  </data>
+  <data name="StringFormat4" xml:space="preserve">
+    <value>{0}{1}{2}{3}</value>
+  </data>
+  <data name="DoubleZero" xml:space="preserve">
+    <value>00</value>
+  </data>
+  <data name="Message13" xml:space="preserve">
+    <value>Message13</value>
+  </data>
+  <data name="Message14" xml:space="preserve">
+    <value>Message14</value>
+  </data>
+  <data name="TemperatureRange" xml:space="preserve">
+    <value>TemperatureRange</value>
+  </data>
+  <data name="LanguageFilePath" xml:space="preserve">
+    <value>/RDS;component/Apps/Dictionary/Language/{0}.xaml</value>
+  </data>
+  <data name="JsonConfigFilePath" xml:space="preserve">
+    <value>\Apps\Config.json</value>
+  </data>
+  <data name="InstrumentName" xml:space="preserve">
+    <value>InstrumentName</value>
+  </data>
+  <data name="InstrumentType" xml:space="preserve">
+    <value>InstrumentType</value>
+  </data>
+  <data name="InstrumentVersion" xml:space="preserve">
+    <value>InstrumentVersion</value>
+  </data>
+  <data name="VaildationError2" xml:space="preserve">
+    <value>VaildationError2</value>
+  </data>
+  <data name="VaildationError3" xml:space="preserve">
+    <value>VaildationError3</value>
+  </data>
+  <data name="ExpNo" xml:space="preserve">
+    <value>ExpNo</value>
+  </data>
+  <data name="Message15" xml:space="preserve">
+    <value>Message15</value>
+  </data>
+  <data name="Message16" xml:space="preserve">
+    <value>Message16</value>
+  </data>
+  <data name="StringFormat1" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="DefaultExt" xml:space="preserve">
+    <value>*.{0}</value>
+  </data>
+  <data name="Csv" xml:space="preserve">
+    <value>Csv</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>{0} 文件|*.{0}</value>
+  </data>
+  <data name="Message17" xml:space="preserve">
+    <value>Message17</value>
+  </data>
+  <data name="ExportFilePath" xml:space="preserve">
+    <value>\Apps\Export</value>
+  </data>
+  <data name="BlueTransparent" xml:space="preserve">
+    <value>BlueTransparent</value>
+  </data>
+  <data name="Message18" xml:space="preserve">
+    <value>Message18</value>
+  </data>
+  <data name="ThreebleZero" xml:space="preserve">
+    <value>000</value>
+  </data>
+  <data name="DoubleLeft" xml:space="preserve">
+    <value>DoubleLeft</value>
+  </data>
+  <data name="DoubleRight" xml:space="preserve">
+    <value>DoubleRight</value>
+  </data>
+  <data name="HBV" xml:space="preserve">
+    <value>HBV</value>
+  </data>
+  <data name="HCV" xml:space="preserve">
+    <value>HCV</value>
+  </data>
+  <data name="HIV" xml:space="preserve">
+    <value>HIV</value>
+  </data>
+  <data name="ExperimentTypeNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="EmptyName" xml:space="preserve">
+    <value>●</value>
+  </data>
+  <data name="DynamicItemName1" xml:space="preserve">
+    <value>企业定量质控品S</value>
+  </data>
+  <data name="DynamicItemName2" xml:space="preserve">
+    <value>最低检出限参考品</value>
+  </data>
+  <data name="DynamicItemName3" xml:space="preserve">
+    <value>灵敏度/定量参考品</value>
+  </data>
+  <data name="ReagentView1_MB" xml:space="preserve">
+    <value>ReagentView1_MB</value>
+  </data>
+  <data name="ReagentView1_MO" xml:space="preserve">
+    <value>ReagentView1_MO</value>
+  </data>
+  <data name="ReagentView1_NS" xml:space="preserve">
+    <value>ReagentView1_NS</value>
+  </data>
+  <data name="ReagentView1_UP" xml:space="preserve">
+    <value>ReagentView1_UP</value>
+  </data>
+  <data name="ReagentView1_WI" xml:space="preserve">
+    <value>ReagentView1_WI</value>
+  </data>
+  <data name="Copies" xml:space="preserve">
+    <value>Copies/mL</value>
+  </data>
+  <data name="DateFormat1" xml:space="preserve">
+    <value>yyyy/MM/dd</value>
+  </data>
+  <data name="E" xml:space="preserve">
+    <value>#.#E+00</value>
+  </data>
+  <data name="IU" xml:space="preserve">
+    <value>IU/mL</value>
+  </data>
+  <data name="Cell" xml:space="preserve">
+    <value>Cell</value>
+  </data>
+  <data name="fConc" xml:space="preserve">
+    <value>fConc</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="strBeginReadTime" xml:space="preserve">
+    <value>strBeginReadTime</value>
+  </data>
+  <data name="strItemName" xml:space="preserve">
+    <value>strItemName</value>
+  </data>
+  <data name="strIUperml" xml:space="preserve">
+    <value>strIUperml</value>
+  </data>
+  <data name="strLogConcResult" xml:space="preserve">
+    <value>strLogConcResult</value>
+  </data>
+  <data name="strName" xml:space="preserve">
+    <value>strName</value>
+  </data>
+  <data name="strSampleID" xml:space="preserve">
+    <value>strSampleID</value>
+  </data>
+  <data name="ExcelCommandString" xml:space="preserve">
+    <value>select * from [{0}$]</value>
+  </data>
+  <data name="ExcelConnectionString" xml:space="preserve">
+    <value>Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties='Excel 8.0;HDR=Yes;IMEX=1;'</value>
+  </data>
+  <data name="GB2312" xml:space="preserve">
+    <value>GB2312</value>
+  </data>
+  <data name="PseudoDataFilePath" xml:space="preserve">
+    <value>{0}\Apps\Database\{1}.xls</value>
+  </data>
+  <data name="Lock" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="UnLock" xml:space="preserve">
+    <value>UnLock</value>
+  </data>
+  <data name="P_Abort" xml:space="preserve">
+    <value>P_Abort</value>
+  </data>
+  <data name="Alert" xml:space="preserve">
+    <value>Alert</value>
+  </data>
+  <data name="P_Cancel" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="P_Ok" xml:space="preserve">
+    <value>P_Ok</value>
+  </data>
+  <data name="P_Retry" xml:space="preserve">
+    <value>P_Retry</value>
+  </data>
+  <data name="Wait" xml:space="preserve">
+    <value>Wait</value>
+  </data>
+  <data name="strConc" xml:space="preserve">
+    <value>strConc</value>
+  </data>
+  <data name="Xml" xml:space="preserve">
+    <value>Xml</value>
+  </data>
+  <data name="Jpg" xml:space="preserve">
+    <value>jpg</value>
+  </data>
+  <data name="Pdf" xml:space="preserve">
+    <value>pdf</value>
+  </data>
+  <data name="Separator9" xml:space="preserve">
+    <value>|</value>
+  </data>
+  <data name="L_T_Ok" xml:space="preserve">
+    <value>L_T_Ok</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>女性</value>
+  </data>
+  <data name="NoSex" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="Rds" xml:space="preserve">
+    <value>Rds</value>
+  </data>
+  <data name="BlueColor2" xml:space="preserve">
+    <value>BlueColor2</value>
+  </data>
+  <data name="WathetColor3" xml:space="preserve">
+    <value>WathetColor3</value>
+  </data>
+  <data name="WathetColor2" xml:space="preserve">
+    <value>WathetColor2</value>
+  </data>
+  <data name="GreenTransparent" xml:space="preserve">
+    <value>GreenTransparent</value>
+  </data>
+</root>

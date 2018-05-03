@@ -1,0 +1,62 @@
+﻿<UserControl 
+    x:Class="RDS.Views.Result.ResultView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:RDS.Views.Result"
+    mc:Ignorable="d" 
+    xmlns:vm="clr-namespace:RDS.ViewModels.Result"
+    d:DesignHeight="1000" 
+    d:DesignWidth="1900">
+    <UserControl.DataContext>
+        <vm:ResultViewmodel/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <Path x:Key="Content_ActualData" Margin="5,7,0,0" Width="18" Height="15" Stretch="Fill" Data="{StaticResource ActualData}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+        <Canvas x:Key="Content_Import">
+            <Path Canvas.Left="6" Canvas.Top="4" Width="17" Height="18" Stretch="Fill" Data="{StaticResource Report }" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+            <Path Canvas.Left="1.5" Canvas.Top="10" Width="10" Height="10" Stretch="Fill" Data="{StaticResource Right}" Stroke="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Background}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+        </Canvas>
+        <Canvas x:Key="Content_Export">
+            <Path Canvas.Left="6" Canvas.Top="4" Width="17" Height="18" Stretch="Fill" Data="{StaticResource Report }" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+            <Path Canvas.Left="17" Canvas.Top="10" Width="10" Height="10" Stretch="Fill" Data="{StaticResource Right}" Stroke="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Background}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+        </Canvas>
+        <Path x:Key="Content_SearchData" x:Shared="false"  Margin="4,4,0,0" Width="20" Height="20" Stretch="Fill" Data="{StaticResource Search}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+        
+    </UserControl.Resources>
+    <Viewbox Stretch="Fill" >
+        <Canvas Width="950" Height="500">
+            <Grid Canvas.Top="30" Canvas.Right="10" Width="50" Height="440">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <CheckBox Style="{StaticResource RD_ElipseTextSwitch}" IsChecked="{Binding IsQualitative}" Content="定性" Width="50" Height="50"/>
+                    <CheckBox Style="{StaticResource RD_ElipseTextSwitch}" IsChecked="{Binding IsQuantitative}" Content="定量" Width="50" Height="50" Margin="0,20,0,0"/>
+
+                    <Button Style="{StaticResource RD_EllipseButtonBrightStyle3}" Content="{StaticResource Content_ActualData}" ToolTipService.ToolTip="{DynamicResource L_T_ActualData}" Command="{Binding ShowActualResult}" Width="50" Height="50" Margin="0,50,0,0"/>
+                    <Button Style="{StaticResource RD_EllipseButtonBrightStyle3}" Content="{StaticResource Content_Import}" Command="{Binding Import}" ToolTipService.ToolTip="{DynamicResource L_T_ImportData}" Width="50" Height="50" Margin="0,20,0,0"/>
+                    <Button Style="{StaticResource RD_EllipseButtonBrightStyle3}" Content="{StaticResource Content_Export}" Command="{Binding Export}" Width="50" Height="50" Margin="0,20,0,0"/>
+                    <Button Style="{StaticResource RD_EllipseButtonBrightStyle3}" Content="{StaticResource Content_SearchData}" Command="{Binding OpenPopup}" CommandParameter="true" Width="50" Height="50" Margin="0,20,0,0"/>
+                </StackPanel>
+            </Grid>
+            <TabControl SelectedIndex="{Binding ExperimentTypeIndex}" BorderBrush="Transparent" Background="Transparent" Width="886" Height="500">
+                <TabItem Height=".1">
+                    <local:QualitativeResultView/>
+                </TabItem>
+                <TabItem Height=".1">
+                    <local:QuantitativeResultView/>
+                </TabItem>
+            </TabControl>
+
+            <Grid Visibility="{Binding PopupState}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="950" Height="500">
+                <TabControl Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" SelectedIndex="{Binding ExperimentTypeIndex}">
+                    <TabItem Height=".1" Background="{x:Null}">
+                        <local:QualitativeSearchView DataContext="{Binding QualitativeSearchViewmodel}"/>
+                    </TabItem>
+                    <TabItem Height=".1">
+                        
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </Canvas>
+    </Viewbox>
+</UserControl>

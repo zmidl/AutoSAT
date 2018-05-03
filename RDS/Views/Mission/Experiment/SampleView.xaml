@@ -1,0 +1,438 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:rdscl="clr-namespace:RDSCL;assembly=RDSCL"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:local="clr-namespace:RDS.Views.Monitor" 
+    x:Class="RDS.Views.Monitor.SampleView"
+    xmlns:vm="clr-namespace:RDS.ViewModels.Mission.Experiment"
+    xmlns:converter="clr-namespace:RDS.ViewModels.Common"
+    mc:Ignorable="d" 
+    xmlns:behavior="clr-namespace:RDS.ViewModels.Common.Behaviors"
+    x:Name="Instance"
+    d:DesignHeight="1000" 
+    d:DesignWidth="1900">
+    <UserControl.DataContext>
+        <vm:SampleViewModel/>
+    </UserControl.DataContext>
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding SaveEditedText}" Gesture="Enter"/>
+    </UserControl.InputBindings>
+    <UserControl.Resources>
+        <Grid x:Key="Content_ManualSampling" x:Shared="false" >
+            <Path Margin="5" Width="18" Stretch="UniformToFill" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type Button}}, Path=Foreground}" Data="{StaticResource Add}" />
+        </Grid>
+        
+        <Grid x:Key="Content_AutoSamping" x:Shared="false">
+            <Path   Margin="3,5,4,3" Width="22" Stretch="Uniform" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type Button}}, Path=Foreground}"  Data="{StaticResource AutoSamping}"/>
+        </Grid>
+
+        <Style TargetType="Button" BasedOn="{StaticResource RD_EllipseButtonBrightStyle3}">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="50"/>
+        </Style>
+
+        <Style x:Key="ColumnTextBlock" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="{StaticResource BlueColor}"/>
+        </Style>
+        <converter:DateTimeToString_yyyyMMdd x:Key="DateTimeToString_yyyyMMdd" />
+
+        <Path x:Key="Path_Manual" Data="{StaticResource HandSamping}"  Fill="White" Stretch="Uniform"/>
+
+        <converter:CanAutoSamplingToSolidColorBrush x:Key="CanAutoSamplingToSolidColorBrush"/>
+
+        <converter:CanManualSamplingToSolidColorBrush x:Key="CanManualSamplingToSolidColorBrush"/>
+
+        <converter:IsTaskStartedToCanEdit x:Key="IsTaskStartedToCanEdit"/>
+
+        <converter:StringToSubstring x:Key="StringToSubstring"/>
+
+        <DataTemplate x:Key="BarcodeHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.ShowBarcodeEditbox, ElementName=Instance, Mode=OneWay}" CommandParameter="{Binding  SelectedItems, ElementName=ucDataGrid}" Width="100" Height="26" >
+                <TextBlock Text="{DynamicResource SampleView_BarCode}" Foreground="White" />
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="IdHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.EditId, ElementName=Instance, Mode=OneWay}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="100" Height="26" >
+                <TextBlock Text="{DynamicResource SampleView_Id}" Foreground="White" />
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="NameHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.ShowNameEditbox, Mode=OneWay, ElementName= Instance}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="70" Height="26" >
+                <TextBlock Text="{DynamicResource SampleView_Name}" Foreground="White" />
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="SexHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.ShowSexEditbox, Mode=OneWay, ElementName= Instance}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="50" Height="26" >
+                <TextBlock Text="{DynamicResource SampleView_Sex}" Foreground="White" VerticalAlignment="Center"/>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="AgeHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.ShowAgeEditbox, Mode=OneWay,ElementName= Instance}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="55" Height="26" >
+                <TextBlock Text="{DynamicResource SampleView_Age}" Foreground="White" VerticalAlignment="Center"/>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ClassHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.ShowClassEditbox, Mode=OneWay,ElementName= Instance}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="60" Height="26" >
+                <TextBlock Text="{DynamicResource SampleView_Class}" Foreground="White" VerticalAlignment="Center"/>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ReagentsHeader">
+            <Button x:Name="Button_ReagentHeader" Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.ShowItemEditbox, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SampleView}}}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="130" Height="26" >
+                <TextBlock Text="{DynamicResource SampleView_Item}" Foreground="White" VerticalAlignment="Center"/>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="DateHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.ShowDateEditbox, Mode=OneWay, ElementName= Instance}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="100" Height="26" >
+                <TextBlock Text="{DynamicResource SampleView_ExperimentDate}" Foreground="White" VerticalAlignment="Center"/>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="EmergencyHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.EditEmergency, Mode=OneWay,ElementName= Instance}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="38" Height="26" >
+                <TextBlock Text="{DynamicResource SampleView_Emergency}" Foreground="White" VerticalAlignment="Center"/>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="TypeHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.ShowTypeSeriesEditbox, Mode=OneWay, ElementName= Instance}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="80" Height="26" >
+                <TextBlock Text="类别" Foreground="White" VerticalAlignment="Center"/>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="TypeNameHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.ShowTypeName, Mode=OneWay,ElementName= Instance}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="80" Height="26" >
+                <TextBlock Text="类别名" Foreground="White" VerticalAlignment="Center"/>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ConcentrationHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.ShowConcentrationEditbox, Mode=OneWay, ElementName= Instance}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="62" Height="26" >
+                <TextBlock Text="{DynamicResource SampleView_Concentration}" Foreground="White" VerticalAlignment="Center"/>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="GroupHeader">
+            <Button Style="{StaticResource RD_ButtonBrightStyle}" Command="{Binding ViewModel.ShowGroupEditbox, Mode=OneWay, ElementName= Instance}" CommandParameter="{Binding ElementName=ucDataGrid,Path= SelectedItems}" Width="90" Height="26" >
+                <TextBlock Text="{DynamicResource SampleView_Group}" Foreground="White" VerticalAlignment="Center"/>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="EmergencyColumn">
+            <CheckBox Style="{StaticResource RD_ElipseCheckBoxStyle}"  Height="18" IsChecked="{Binding Tube.Cavities[0].IsEmergency}" Margin="0,1,0,0" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="SexColumn">
+            <TextBlock Style="{StaticResource ColumnTextBlock}"  Height="18" Text="{Binding Tube.Cavities[0].PatientInfo.Sex,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0,1,0,0" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="ClassColumn">
+            <TextBlock Style="{StaticResource ColumnTextBlock}"  Height="18" Text="{Binding Tube.Cavities[0].PatientInfo.Type,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0,1,0,0" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="DateColumn">
+            <TextBlock Style="{StaticResource ColumnTextBlock}" Text="{Binding Tube.Cavities[0].PatientInfo.DateTime}"/>
+        </DataTemplate>
+
+        <Style BasedOn="{StaticResource TextBlockStyle}" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="{StaticResource BlueColor}"/>
+            <Setter Property="Margin" Value="0,2.1,0,0"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <Style x:Key="Editing" TargetType="{x:Type TextBox}">
+            <Setter Property="Foreground" Value="{StaticResource BlueColor}"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BlueColor}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CaretBrush" Value="{StaticResource BlueColor}"/>
+        </Style>
+
+        <DataTemplate x:Key="SexEditing" >
+            <ComboBox Width="50" Height="20" ItemsSource="{Binding ViewModel.SexOptions, Mode=OneWay, ElementName= Instance}"  Style="{StaticResource RD_ComboBoxBrightStyle}" FontSize="10" FontWeight="Normal" SelectedValue="{Binding Tube.Cavities[0].PatientInfo.Sex}"/>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ClassEditing" >
+            <ComboBox Width="50" Height="20" ItemsSource="{Binding ViewModel.ClassOptions, Mode=OneWay, ElementName= Instance}"  Style="{StaticResource RD_ComboBoxBrightStyle}" FontSize="10" FontWeight="Normal" SelectedValue="{Binding Tube.Cavities[0].PatientInfo.Type}"/>
+        </DataTemplate>
+
+        <DataTemplate x:Key="DateEditing" >
+            <DatePicker Width="100" Style="{StaticResource RD_DatePickerBrightStyle}" SelectedDate="{Binding Tube.Cavities[0].PatientInfo.DateTime }"/>
+        </DataTemplate>
+
+        <Style x:Key="DataGridReagentsEditing" BasedOn="{StaticResource RD_ComboBoxBrightStyle}" TargetType="{x:Type ComboBox}"/>
+
+        <Canvas x:Key="Content_SaveAndExit">
+            <Path Margin="6,3,0,0" Stretch="Fill" Data="{StaticResource Return}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+            <Rectangle Width="10" Height="10" Canvas.Left="13" Canvas.Top="14" RadiusX="2" RadiusY="2" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Background}"/>
+            <Path Width="8" Height="8" Canvas.Left="14" Canvas.Top="15" Stretch="Fill" Data="{StaticResource Save}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+        </Canvas>
+
+        <Path x:Key="Content_ExitView" Margin="6,3,0,0" Stretch="Fill" Data="{StaticResource Return}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+
+        <ToolTip x:Key="ToolTip_SaveAndExit" Style="{StaticResource RD_ToolTipBrightStyle}" Content="{DynamicResource L_T_SaveAndExit}"/>
+
+        <ToolTip x:Key="ToolTip_ExitView" Style="{StaticResource RD_ToolTipBrightStyle}" Content="{DynamicResource L_T_ExitView}"/>
+    </UserControl.Resources>
+    <Viewbox Stretch="Fill" >
+        <Grid Width="950" Height="500">
+            <Canvas>
+                <Grid Canvas.Top="30" Canvas.Right="10" Width="50" Height="440">
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                        <Button Content="{StaticResource Content_ExitView}" Command="{Binding SaveAndExit}" CommandParameter="{Binding ElementName=ucDataGrid}" ToolTip="{StaticResource ToolTip_SaveAndExit}" />
+                    </StackPanel>
+                </Grid>
+                <TextBlock  Text="{Binding AAA}" FontSize="16"/>
+                <DataGrid 
+                    x:Name="ucDataGrid" IsEnabled="{Binding IsTaskStarted,Converter={StaticResource IsTaskStartedToCanEdit}}" 
+                    Style="{StaticResource RD_DataGridBrightStyle2}" TextBlock.LineStackingStrategy="MaxHeight"
+                    ItemsSource="{Binding CurrentSampleRack2.Slots,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                    SelectionMode="Extended" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"
+                    AutoGenerateColumns="False" Width="754" Height="450" Canvas.Left="6" Canvas.Top="25">
+                    <DataGrid.InputBindings>
+                        <KeyBinding Key="Delete" Command="{Binding PressDelete}" CommandParameter="{Binding ElementName=ucDataGrid ,Path = SelectedItems}" />
+                    </DataGrid.InputBindings>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn MinWidth="43" IsReadOnly="True" Header="{DynamicResource SampleView_HoleSite}" Binding="{Binding Tube.Cavities[0].HoleNumber}"/>
+                        <!--<DataGridTextColumn Header="状态" MinWidth="58" IsReadOnly="True"/>-->
+                        <DataGridTextColumn MinWidth="100" MaxWidth="100" EditingElementStyle="{StaticResource Editing}" HeaderTemplate="{StaticResource BarcodeHeader}" Binding="{Binding Tube.Cavities[0].PatientInfo.Barcode}" />
+                        <DataGridTextColumn MinWidth="100" MaxWidth="100" EditingElementStyle="{StaticResource Editing}" HeaderTemplate="{StaticResource IdHeader}" Binding="{Binding Tube.Cavities[0].PatientInfo.ID}" />
+                        <DataGridTextColumn MinWidth="70" MaxWidth="70" EditingElementStyle="{StaticResource Editing}" HeaderTemplate="{StaticResource NameHeader}" Binding="{Binding Tube.Cavities[0].PatientInfo.Name}" />
+                        <!--<DataGridTextColumn MinWidth="50" IsReadOnly="True" HeaderTemplate="{StaticResource SexHeader}" Binding="{Binding Sex}" />-->
+                        <DataGridTemplateColumn MinWidth="50" HeaderTemplate="{StaticResource SexHeader}" CellTemplate="{StaticResource SexColumn}" CellEditingTemplate="{StaticResource SexEditing}"/>
+
+                        <DataGridTextColumn MinWidth="55" MaxWidth="55" EditingElementStyle="{StaticResource Editing}" HeaderTemplate="{StaticResource AgeHeader}" Binding="{Binding Tube.Cavities[0].PatientInfo.Age}" />
+                        <!--<DataGridTextColumn MinWidth="50" IsReadOnly="True" HeaderTemplate="{StaticResource ClassHeader}" Binding="{Binding Class}" />-->
+                        <DataGridTemplateColumn MinWidth="60" HeaderTemplate="{StaticResource ClassHeader}" CellTemplate="{StaticResource ClassColumn}" CellEditingTemplate="{StaticResource ClassEditing}" />
+
+                        <DataGridTextColumn MinWidth="130" IsReadOnly="True" HeaderTemplate="{StaticResource ReagentsHeader}" Binding="{Binding Tube.Cavities[0].PatientInfo.Item,UpdateSourceTrigger=LostFocus}" FontSize="13"/>
+                        <!--<DataGridTextColumn MinWidth="75" IsReadOnly="True" HeaderTemplate="{StaticResource DateHeader}" Binding="{Binding Date}"/>-->
+                        <DataGridTemplateColumn MinWidth="100" MaxWidth="100" HeaderTemplate="{StaticResource DateHeader}" CellTemplate="{StaticResource DateColumn}" CellEditingTemplate="{StaticResource DateEditing}"/>
+
+                        <DataGridTemplateColumn MinWidth="38" HeaderTemplate="{StaticResource EmergencyHeader}" CellTemplate="{StaticResource EmergencyColumn}"/>
+                        <DataGridTextColumn MinWidth="80" IsReadOnly="True" HeaderTemplate="{StaticResource TypeHeader}" Binding="{Binding TypeSeriesName}"/>
+                        <DataGridTextColumn MinWidth="80" IsReadOnly="True" HeaderTemplate="{StaticResource TypeNameHeader}" Binding="{Binding TypeName}"/>
+                        <DataGridTextColumn MinWidth="62" IsReadOnly="True" HeaderTemplate="{StaticResource ConcentrationHeader}" Binding="{Binding Concentration,StringFormat={}{0:#.#E+00}}" />
+                        <DataGridTextColumn MinWidth="90" IsReadOnly="True" HeaderTemplate="{StaticResource GroupHeader}" Binding="{Binding Group}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Canvas Canvas.Left="-15" Canvas.Top="5">
+                    <rdscl:RD_SampleRack DataSource="{Binding SampleRacks2[0]}" Width="26" Canvas.Left="782" Canvas.Top="33">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseUp">
+                                <i:InvokeCommandAction Command="{Binding SelecteSampleRack}" CommandParameter="0"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </rdscl:RD_SampleRack>
+                    <rdscl:RD_SampleRack DataSource="{Binding SampleRacks2[1]}" Width="26" Canvas.Left="812" Canvas.Top="33">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseUp">
+                                <i:InvokeCommandAction Command="{Binding SelecteSampleRack}" CommandParameter="1"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </rdscl:RD_SampleRack>
+                    <rdscl:RD_SampleRack DataSource="{Binding SampleRacks2[2]}" Width="26" Canvas.Left="842" Canvas.Top="33">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseUp">
+                                <i:InvokeCommandAction Command="{Binding SelecteSampleRack}" CommandParameter="2"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </rdscl:RD_SampleRack>
+                    <rdscl:RD_SampleRack DataSource="{Binding SampleRacks2[3]}" Width="26" Canvas.Left="872" Canvas.Top="33">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseUp">
+                                <i:InvokeCommandAction Command="{Binding SelecteSampleRack}" CommandParameter="3"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </rdscl:RD_SampleRack>
+
+                    <StackPanel Orientation="Horizontal" Canvas.Left="789" Canvas.Top="6">
+                        <StackPanel x:Name="StackPanel_Reset_1" Orientation="Vertical" Background="#00000000">
+                            <Path Data="{StaticResource CloseCircle}" Stretch="Uniform" Width="8" Fill="{StaticResource BlueColor}"/>
+                            <TextBlock Foreground="{StaticResource BlueColor}" Text="A" FontSize="16" Margin="0,-2,0,0"/>
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseUp">
+                                    <i:InvokeCommandAction Command="{Binding ResetSampleRack}" CommandParameter="0"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </StackPanel>
+                        <StackPanel x:Name="StackPanel_Reset_2" Orientation="Vertical" Background="#00000000" Margin="18,0,0,0">
+                            <Path Data="{StaticResource CloseCircle}" Stretch="Uniform" Width="8" Fill="{StaticResource BlueColor}"/>
+                            <TextBlock Foreground="{StaticResource BlueColor}" Text="B" FontSize="16" Margin="0,-2,0,0"/>
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseUp">
+                                    <i:InvokeCommandAction Command="{Binding ResetSampleRack}" CommandParameter="1"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </StackPanel>
+                        <StackPanel x:Name="StackPanel_Reset_3" Orientation="Vertical" Background="#00000000" Margin="19,0,0,0">
+                            <Path Data="{StaticResource CloseCircle}" Stretch="Uniform" Width="8" Fill="{StaticResource BlueColor}"/>
+                            <TextBlock Foreground="{StaticResource BlueColor}" Text="C" FontSize="16" Margin="0,-2,0,0"/>
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseUp">
+                                    <i:InvokeCommandAction Command="{Binding ResetSampleRack}" CommandParameter="2"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </StackPanel>
+                        <StackPanel x:Name="StackPanel_Reset_4" Orientation="Vertical" Background="#00000000" Margin="18,0,0,0">
+                            <Path Data="{StaticResource CloseCircle}" Stretch="Uniform" Width="8" Fill="{StaticResource BlueColor}"/>
+                            <TextBlock Foreground="{StaticResource BlueColor}" Text="D" FontSize="16" Margin="0,-2,0,0"/>
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseUp">
+                                    <i:InvokeCommandAction Command="{Binding ResetSampleRack}" CommandParameter="3"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Visibility="Collapsed" Orientation="Vertical" Canvas.Left="762" Canvas.Top="56">
+                        <TextBlock Text="1" />
+                        <TextBlock Text="2" />
+                        <TextBlock Text="3" />
+                        <TextBlock Text="4" />
+                        <TextBlock Text="5" />
+                        <TextBlock Text="6" />
+                        <TextBlock Text="7" />
+                        <TextBlock Text="8" />
+                        <TextBlock Text="9" />
+                        <TextBlock Text="10" />
+                        <TextBlock Text="11" />
+                        <TextBlock Text="12" />
+                        <TextBlock Text="13" />
+                        <TextBlock Text="14" />
+                        <TextBlock Text="15" />
+                        <TextBlock Text="16" />
+                        <TextBlock Text="17" />
+                        <TextBlock Text="18" />
+                        <TextBlock Text="19" />
+                        <TextBlock Text="20" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Canvas.Left="782" Canvas.Top="430">
+                        <Button Height="26" Width="26" Content="{StaticResource Content_AutoSamping}" Command="{Binding AutomaticSampling}" CommandParameter="0"/>
+                        <Button Height="26" Width="26" Content="{StaticResource Content_AutoSamping}" Command="{Binding AutomaticSampling}" CommandParameter="1" Margin="4,0,0,0"/>
+                        <Button Height="26" Width="26" Content="{StaticResource Content_AutoSamping}" Command="{Binding AutomaticSampling}" CommandParameter="2" Margin="4,0,0,0"/>
+                        <Button Height="26" Width="26" Content="{StaticResource Content_AutoSamping}" Command="{Binding AutomaticSampling}" CommandParameter="3" Margin="4,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Canvas.Left="782" Canvas.Top="460">
+                        <Button Width="26" Height="26" Content="{StaticResource Content_ManualSampling}" IsEnabled="{Binding SampleRacks2[0].CanManualSampling}" Command="{Binding ManualSampling}" CommandParameter="0"/>
+                        <Button Width="26" Height="26" Content="{StaticResource Content_ManualSampling}" IsEnabled="{Binding SampleRacks2[1].CanManualSampling}" Command="{Binding ManualSampling}" CommandParameter="1" Margin="4,0,0,0"/>
+                        <Button Width="26" Height="26" Content="{StaticResource Content_ManualSampling}" IsEnabled="{Binding SampleRacks2[2].CanManualSampling}" Command="{Binding ManualSampling}" CommandParameter="2" Margin="4,0,0,0"/>
+                        <Button Width="26" Height="26" Content="{StaticResource Content_ManualSampling}" IsEnabled="{Binding SampleRacks2[3].CanManualSampling}" Command="{Binding ManualSampling}" CommandParameter="3" Margin="4,0,0,0"/>
+
+                    </StackPanel>
+
+                    <Rectangle Visibility="{Binding SampleRacks2[0].SelectionFrameStates,FallbackValue=Visibility}" Stroke="{StaticResource BlueColor}" Width="32" Height="396" Canvas.Left="779" Canvas.Top="30" RadiusX="6" RadiusY="6" StrokeThickness="1.5"/>
+                    <Rectangle Visibility="{Binding SampleRacks2[1].SelectionFrameStates,FallbackValue=Visibility}" Stroke="{StaticResource  BlueColor}" Width="32" Height="396" Canvas.Left="809" Canvas.Top="30" RadiusX="6" RadiusY="6" StrokeThickness="1.5"/>
+                    <Rectangle Visibility="{Binding SampleRacks2[2].SelectionFrameStates,FallbackValue=Visibility}" Stroke="{StaticResource  BlueColor}" Width="32" Height="396" Canvas.Left="839" Canvas.Top="30" RadiusX="6" RadiusY="6" StrokeThickness="1.5"/>
+                    <Rectangle Visibility="{Binding SampleRacks2[3].SelectionFrameStates,FallbackValue=Visibility}" Stroke="{StaticResource  BlueColor}" Width="32" Height="396" Canvas.Left="869" Canvas.Top="30" RadiusX="6" RadiusY="6" StrokeThickness="1.5"/>
+                </Canvas>
+
+                <i:Interaction.Behaviors>
+                    <behavior:SampleMultipSelect ViewModel="{Binding}"/>
+                </i:Interaction.Behaviors>
+            </Canvas>
+            <Canvas x:Name="Popup" Visibility="{Binding PopupVisibility,FallbackValue=Hidden}" Background="#7FFFFFFF">
+                <Rectangle Canvas.Left="350" Canvas.Top="160" Fill="White" StrokeThickness="2" Stroke="{StaticResource BlueColor}" Width="260" Height="150"/>
+                <TabControl Canvas.Left="352" Canvas.Top="186" SelectedIndex="{Binding InputtingPageIndex}"  Width="196" Height="100" BorderBrush="{x:Null}" BorderThickness="0">
+                    <TabItem x:Name="Items" BorderBrush="{x:Null}" Background="{x:Null}" Height="0" Width="0.1">
+                        <ListBox ItemsSource="{Binding UsedItems}" FocusVisualStyle="{x:Null}"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ListBox.Template>
+                                <ControlTemplate TargetType="{x:Type ListBox}">
+                                    <WrapPanel Orientation="Horizontal" IsItemsHost="True"/>
+                                </ControlTemplate>
+                            </ListBox.Template>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical">
+                                        <CheckBox Style="{StaticResource RD_TextSwitch}" Margin="0,6,0,0" Width="70" Content="{Binding Name}" IsChecked="{Binding IsSelected}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>   
+                        </ListBox>
+                    </TabItem>
+                    <TabItem x:Name="Concentration" BorderBrush="{x:Null}" Background="{x:Null}" Height="0" Width="0.1">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{DynamicResource SampleView_Concentration}" FontSize="16" />
+                            <TextBox Style="{StaticResource RD_TextBoxBrightStyle}" MaxLength="10" Text="{Binding EditingText,StringFormat={}{0:#.##E+0}}" Width="160" Height="30" Margin="0,20,0,0"/>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem x:Name="Group" BorderBrush="{x:Null}" Background="{x:Null}" Height="0" Width="0.1">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="实验名称" FontSize="16" />
+                            <ComboBox Style="{StaticResource RD_ComboBoxBrightStyle}" ItemsSource="{Binding ExperimentNameOptions}" SelectedItem="{Binding EditingText}" Width="150" Height="30" Margin="0,20,0,0"/>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem x:Name="TypeSeriesName" BorderBrush="{x:Null}" Background="{x:Null}" Height="0" Width="0.1">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="类型" FontSize="16" />
+                            <ComboBox x:Name="ComboBox_TypeSeries" ItemsSource="{Binding TypeSeriesOptions}" Style="{StaticResource RD_ComboBoxBrightStyle}" SelectedValue="{Binding EditingText}" SelectedValuePath="Name" DisplayMemberPath="Name" Width="100" Height="30" Margin="0,20,0,0"/>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem x:Name="TypeName" BorderBrush="{x:Null}" Background="{x:Null}" Height="0" Width="0.1">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="类型名称" FontSize="16"/>
+                            <ComboBox Style="{StaticResource RD_ComboBoxBrightStyle}" ItemsSource="{Binding TypeOptions}" DisplayMemberPath="Name" SelectedValuePath="Name" SelectedValue="{Binding EditingText}" Width="100" Height="30" Margin="0,20,0,0"/>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem x:Name="Date" BorderBrush="{x:Null}" Background="{x:Null}" Height="0" Width="0.1">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="采样日期" FontSize="16" />
+                            <Canvas  Margin="0,20,0,0">
+                                <DatePicker Canvas.Left="25"  Style="{StaticResource RD_DatePickerBrightStyle}" SelectedDate="{Binding EditingText,Converter={StaticResource DateTimeToString_yyyyMMdd},ConverterParameter=-1}"  Width="120" Height="30" />
+                                <Button  Canvas.Right="16" BorderThickness="0" Style="{StaticResource ResetButtonStyle}" Command="{Binding ResetDate}" >
+                                    <Path Data="{StaticResource Eraser}"  Width="25" Height="25" Stretch="Fill" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type Button}}, Path=Foreground}" />
+                                </Button>
+                            </Canvas>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem x:Name="Sex" BorderBrush="{x:Null}" Background="{x:Null}" Height="0" Width="0.1">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="性别" FontSize="16"/>
+                            <ComboBox Style="{StaticResource RD_ComboBoxBrightStyle}" ItemsSource="{Binding SexOptions}" SelectedItem="{Binding EditingText}" Width="100" Height="30" Margin="0,20,0,0"/>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem x:Name="Class" BorderBrush="{x:Null}" Background="{x:Null}" Height="0" Width="0.1">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="样本属性" FontSize="16"/>
+                            <ComboBox Style="{StaticResource RD_ComboBoxBrightStyle}" ItemsSource="{Binding ClassOptions}" SelectedItem="{Binding EditingText}" Width="100" Height="30" Margin="0,20,0,0"/>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem x:Name="Age" BorderBrush="{x:Null}" Background="{x:Null}" Height="0" Width="0.1">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="年龄" FontSize="16"/>
+                            <TextBox Style="{StaticResource RD_TextBoxBrightStyle}" Text="{Binding EditingText,UpdateSourceTrigger=Explicit}" MaxLength="20" Width="160" Height="30" Margin="0,20,0,0"/>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem x:Name="Barcode" BorderBrush="{x:Null}" Background="{x:Null}" Height="0" Width="0.1">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="条形码" FontSize="16"/>
+                            <TextBox Style="{StaticResource RD_TextBoxBrightStyle}" Text="{Binding EditingText,UpdateSourceTrigger=Explicit}" MaxLength="20" Width="160" Height="30" Margin="0,20,0,0"/>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem x:Name="_Name" BorderBrush="{x:Null}" Background="{x:Null}" Height="0" Width="0.1">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="姓名" FontSize="16"/>
+                            <TextBox Style="{StaticResource RD_TextBoxBrightStyle}" Text="{Binding EditingText,UpdateSourceTrigger=Explicit}" MaxLength="20" Width="160" Height="30" Margin="0,20,0,0"/>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+                <Button Command="{Binding SaveEditedText}" IsDefault="True" Canvas.Left="560" Canvas.Top="180" VerticalAlignment="Bottom" Width="40">
+                    <Path Data="{StaticResource P_Ok}"  Margin="5,8,0,0" Stretch="Fill" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type Button}}, Path=Foreground}" />
+                </Button>
+                <Button Canvas.Left="560" Canvas.Top="246" VerticalAlignment="Bottom" Command="{Binding CancelSavingReagents}"  Width="40">
+                    <Path Margin="7,7,0,0" Stretch="Fill" Data="{StaticResource P_Close}" Fill="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type Button}},Path=Foreground}"/>
+                </Button>
+                <Line Stroke="{StaticResource BlueColor2}" StrokeThickness="2" Y1="0" Y2="140" Canvas.Left="550" Canvas.Top="166"/>
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</UserControl>

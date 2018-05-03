@@ -1,0 +1,168 @@
+﻿<UserControl 
+    x:Class="RDSCL.RD_ReagentRack"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:RDSCL"
+    xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    mc:Ignorable="d" 
+    x:Name="Instance"
+    d:DesignHeight="550" d:DesignWidth="90">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="TextColor" Color="#FF97C300"/>
+        <system:Double x:Key="StrokeThickness" >1</system:Double>
+        <Style x:Key="TextBlock" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="#FF35AAF7"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </UserControl.Resources>
+
+    <UserControl.Style>
+        <Style TargetType="UserControl">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="UserControl">
+                        <Viewbox Stretch="Fill">
+                            <Canvas Width="90" Height="530">
+                                <Rectangle RadiusX="10" RadiusY="10" Width="90" Height="524" Canvas.Top="10" Fill="#FF75C8FF"/>
+                                
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[0].Slots[0].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="38" Canvas.Left="-4" Canvas.Top="20" />
+
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[0].Slots[1].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor,FallbackValue=White}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="38" Canvas.Left="40" Canvas.Top="20" />
+
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[1].Slots[0].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="25" Canvas.Left="-4" Canvas.Top="72"/>
+
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[1].Slots[1].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="25" Canvas.Left="-4" Canvas.Top="100"/>
+
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[1].Slots[2].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="25" Canvas.Left="-4" Canvas.Top="128"/>
+
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[1].Slots[3].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="25" Canvas.Left="-4" Canvas.Top="156"/>
+
+                                <local:RD_Hole
+                                    DataContext="{Binding DataSource.Models[1].Slots[0].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="195"/>
+
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[2].Slots[1].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="220"/>
+
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[2].Slots[2].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                   ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="245"/>
+
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[2].Slots[3].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="270"/>
+
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[3].Slots[0].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="305"/>
+
+                                <local:RD_Hole
+                                    DataContext="{Binding DataSource.Models[3].Slots[1].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="330"/>
+
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[3].Slots[2].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="355"/>
+                                
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[3].Slots[3].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="380"/>
+
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[2].Slots[4].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="420"/>
+                                
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[2].Slots[5].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="445"/>
+                                
+                                <local:RD_Hole
+                                    DataContext="{Binding DataSource.Models[2].Slots[6].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="470"/>
+                                
+                                <local:RD_Hole 
+                                    DataContext="{Binding DataSource.Models[2].Slots[7].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="20" Canvas.Left="-4" Canvas.Top="495"/>
+
+                                <local:RD_ReagentBox 
+                                    DataContext="{Binding DataSource.Models[4].Slots[0].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="28" Height="112" Canvas.Left="27" Canvas.Top="64" />
+
+                                <local:RD_ReagentBox 
+                                    DataContext="{Binding DataSource.Models[4].Slots[1].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="28" Height="112" Canvas.Left="27" Canvas.Top="180" />
+
+                                <local:RD_ReagentBox
+                                    DataContext="{Binding DataSource.Models[4].Slots[2].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="28" Height="112" Canvas.Left="27" Canvas.Top="296" />
+
+                                <local:RD_ReagentBox 
+                                    DataContext="{Binding DataSource.Models[4].Slots[3].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="28" Height="112" Canvas.Left="27" Canvas.Top="412" />
+
+                                <local:RD_ReagentBox  
+                                    DataContext="{Binding DataSource.Models[4].Slots[4].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="28" Height="112" Canvas.Left="57" Canvas.Top="64" />
+
+                                <local:RD_ReagentBox 
+                                    DataContext="{Binding DataSource.Models[4].Slots[5].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="28" Height="112" Canvas.Left="57" Canvas.Top="180" />
+
+                                <local:RD_ReagentBox 
+                                    DataContext="{Binding DataSource.Models[4].Slots[6].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="28" Height="112" Canvas.Left="57" Canvas.Top="296" />
+
+                                <local:RD_ReagentBox 
+                                    DataContext="{Binding DataSource.Models[4].Slots[7].Tube.Cavities[0].WorkLiquide,ElementName= Instance}"
+                                    ContentColor="{Binding ContentColor}" ToolTipService.ToolTip="{Binding ToolTipMessage}"
+                                    Width="28" Height="112" Canvas.Left="57"  Canvas.Top="412" />
+                            </Canvas>
+                        </Viewbox>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Style>
+</UserControl>
